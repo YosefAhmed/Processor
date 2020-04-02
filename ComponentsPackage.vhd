@@ -36,16 +36,6 @@ sum : out STD_LOGI
 );
 end component;
 
---this archi for adder (we don't add it here but we will use it later) so keep it with you
-
---architecture add of adder is
---Signal tmp : STD_LOGIC_Vector (1 downto 0);
---begin
---tmp <= ('0'& A)+ ('0' & B)+ cin;
---sum <= tmp(0);
---cout <= tmp(1);
---end add;
-
 
 
 end ComponentsPackage;
