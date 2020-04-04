@@ -1,2 +1,4 @@
+vhdl work "muxRegFile32x1.vhd"
+vhdl work "GenericReg.vhd"
 vhdl work "ComponentsPackage.vhd"
 vhdl work "Reg_File.vhd"

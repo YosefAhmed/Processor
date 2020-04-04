@@ -1,0 +1,23 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest_isim_beh.exe -prj E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest_beh.prj work.RegisterFileTest 
+ISim P.58f (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest.vhd" Line 44: <registerfile> remains a black-box since it has no binding entity.
+Completed static elaboration
+Fuse Memory Usage: 161336 KB
+Fuse CPU Usage: 389 ms
+WARNING:Simulator:648 - "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest.vhd" Line 44. Instance registerfile is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavior of entity registerfiletest
+Time Resolution for simulation is 1ps.
+Compiled 6 VHDL Units
+Built simulation executable E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest_isim_beh.exe
+Fuse Memory Usage: 178712 KB
+Fuse CPU Usage: 1108 ms

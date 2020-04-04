@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-04-04T20:44:54</DateModified>
+  <DateModified>2020-04-04T23:10:13</DateModified>
   <ModuleName>Reg_File</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>F:/programming/VHDL/Milestone1/Regester file/RegesterFile/iseconfig/Reg_File.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/programming/VHDL/Milestone1/Regester file/RegesterFile</ImplementationReportsDirectory>
+  <SavedFilePath>E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/iseconfig/Reg_File.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile\</ImplementationReportsDirectory>
   <DateInitialized>2020-04-04T20:44:54</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

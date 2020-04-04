@@ -1,0 +1,218 @@
+--------------------------------------------------------------------------------
+Release 14.5 Trace  (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml Reg_File.twx Reg_File.ncd -o Reg_File.twr Reg_File.pcf
+
+Design file:              Reg_File.ncd
+Physical constraint file: Reg_File.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.08 2013-03-26)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+dataOut1<0> |         9.920(R)|      SLOW  |         4.396(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<1> |        10.220(R)|      SLOW  |         4.558(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<2> |        10.124(R)|      SLOW  |         4.508(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<3> |        10.033(R)|      SLOW  |         4.463(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<8> |         9.712(R)|      SLOW  |         4.286(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<9> |         9.589(R)|      SLOW  |         4.209(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<10>|         9.473(R)|      SLOW  |         4.139(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<11>|         9.374(R)|      SLOW  |         4.086(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<16>|         9.070(R)|      SLOW  |         3.926(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<17>|         8.963(R)|      SLOW  |         3.865(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<18>|         8.860(R)|      SLOW  |         3.808(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<19>|         8.733(R)|      SLOW  |         3.727(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<24>|         8.388(R)|      SLOW  |         3.527(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<25>|         8.243(R)|      SLOW  |         3.428(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<26>|         8.117(R)|      SLOW  |         3.363(R)|      FAST  |clk_BUFGP         |   0.000|
+dataOut1<27>|         8.495(R)|      SLOW  |         3.587(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+readSel1<0>    |dataOut1<0>    |    7.363|
+readSel1<0>    |dataOut1<1>    |    7.663|
+readSel1<0>    |dataOut1<2>    |    7.567|
+readSel1<0>    |dataOut1<3>    |    7.476|
+readSel1<0>    |dataOut1<8>    |    7.155|
+readSel1<0>    |dataOut1<9>    |    7.032|
+readSel1<0>    |dataOut1<10>   |    6.916|
+readSel1<0>    |dataOut1<11>   |    6.817|
+readSel1<0>    |dataOut1<16>   |    6.513|
+readSel1<0>    |dataOut1<17>   |    6.406|
+readSel1<0>    |dataOut1<18>   |    6.303|
+readSel1<0>    |dataOut1<19>   |    6.176|
+readSel1<0>    |dataOut1<24>   |    5.831|
+readSel1<0>    |dataOut1<25>   |    5.686|
+readSel1<0>    |dataOut1<26>   |    5.560|
+readSel1<0>    |dataOut1<27>   |    5.938|
+readSel1<1>    |dataOut1<0>    |    7.043|
+readSel1<1>    |dataOut1<1>    |    7.343|
+readSel1<1>    |dataOut1<2>    |    7.247|
+readSel1<1>    |dataOut1<3>    |    7.156|
+readSel1<1>    |dataOut1<4>    |    7.203|
+readSel1<1>    |dataOut1<5>    |    6.898|
+readSel1<1>    |dataOut1<6>    |    6.878|
+readSel1<1>    |dataOut1<7>    |    6.778|
+readSel1<1>    |dataOut1<8>    |    6.835|
+readSel1<1>    |dataOut1<9>    |    6.712|
+readSel1<1>    |dataOut1<10>   |    6.608|
+readSel1<1>    |dataOut1<11>   |    6.517|
+readSel1<1>    |dataOut1<12>   |    6.485|
+readSel1<1>    |dataOut1<13>   |    6.392|
+readSel1<1>    |dataOut1<14>   |    6.365|
+readSel1<1>    |dataOut1<15>   |    6.287|
+readSel1<1>    |dataOut1<16>   |    6.263|
+readSel1<1>    |dataOut1<17>   |    6.166|
+readSel1<1>    |dataOut1<18>   |    6.145|
+readSel1<1>    |dataOut1<19>   |    6.026|
+readSel1<1>    |dataOut1<20>   |    6.007|
+readSel1<1>    |dataOut1<21>   |    5.884|
+readSel1<1>    |dataOut1<22>   |    5.871|
+readSel1<1>    |dataOut1<23>   |    5.480|
+readSel1<1>    |dataOut1<24>   |    5.737|
+readSel1<1>    |dataOut1<25>   |    5.601|
+readSel1<1>    |dataOut1<26>   |    5.566|
+readSel1<1>    |dataOut1<27>   |    5.765|
+readSel1<1>    |dataOut1<28>   |    5.253|
+readSel1<1>    |dataOut1<29>   |    5.201|
+readSel1<1>    |dataOut1<30>   |    5.381|
+readSel1<1>    |dataOut1<31>   |    5.149|
+readSel1<2>    |dataOut1<0>    |    7.396|
+readSel1<2>    |dataOut1<1>    |    7.696|
+readSel1<2>    |dataOut1<2>    |    7.600|
+readSel1<2>    |dataOut1<3>    |    7.509|
+readSel1<2>    |dataOut1<4>    |    7.541|
+readSel1<2>    |dataOut1<5>    |    7.236|
+readSel1<2>    |dataOut1<6>    |    7.216|
+readSel1<2>    |dataOut1<7>    |    7.116|
+readSel1<2>    |dataOut1<8>    |    7.188|
+readSel1<2>    |dataOut1<9>    |    7.065|
+readSel1<2>    |dataOut1<10>   |    6.949|
+readSel1<2>    |dataOut1<11>   |    6.855|
+readSel1<2>    |dataOut1<12>   |    6.823|
+readSel1<2>    |dataOut1<13>   |    6.730|
+readSel1<2>    |dataOut1<14>   |    6.703|
+readSel1<2>    |dataOut1<15>   |    6.625|
+readSel1<2>    |dataOut1<16>   |    6.601|
+readSel1<2>    |dataOut1<17>   |    6.504|
+readSel1<2>    |dataOut1<18>   |    6.483|
+readSel1<2>    |dataOut1<19>   |    6.364|
+readSel1<2>    |dataOut1<20>   |    6.345|
+readSel1<2>    |dataOut1<21>   |    6.222|
+readSel1<2>    |dataOut1<22>   |    6.209|
+readSel1<2>    |dataOut1<23>   |    5.818|
+readSel1<2>    |dataOut1<24>   |    6.075|
+readSel1<2>    |dataOut1<25>   |    5.939|
+readSel1<2>    |dataOut1<26>   |    5.904|
+readSel1<2>    |dataOut1<27>   |    6.103|
+readSel1<2>    |dataOut1<28>   |    5.591|
+readSel1<2>    |dataOut1<29>   |    5.539|
+readSel1<2>    |dataOut1<30>   |    5.719|
+readSel1<2>    |dataOut1<31>   |    5.487|
+readSel1<3>    |dataOut1<0>    |    7.270|
+readSel1<3>    |dataOut1<1>    |    7.449|
+readSel1<3>    |dataOut1<2>    |    7.383|
+readSel1<3>    |dataOut1<3>    |    7.300|
+readSel1<3>    |dataOut1<4>    |    7.486|
+readSel1<3>    |dataOut1<5>    |    7.181|
+readSel1<3>    |dataOut1<6>    |    7.161|
+readSel1<3>    |dataOut1<7>    |    7.061|
+readSel1<3>    |dataOut1<8>    |    7.037|
+readSel1<3>    |dataOut1<9>    |    6.923|
+readSel1<3>    |dataOut1<10>   |    6.891|
+readSel1<3>    |dataOut1<11>   |    6.800|
+readSel1<3>    |dataOut1<12>   |    6.768|
+readSel1<3>    |dataOut1<13>   |    6.675|
+readSel1<3>    |dataOut1<14>   |    6.648|
+readSel1<3>    |dataOut1<15>   |    6.570|
+readSel1<3>    |dataOut1<16>   |    6.546|
+readSel1<3>    |dataOut1<17>   |    6.449|
+readSel1<3>    |dataOut1<18>   |    6.428|
+readSel1<3>    |dataOut1<19>   |    6.309|
+readSel1<3>    |dataOut1<20>   |    6.290|
+readSel1<3>    |dataOut1<21>   |    6.167|
+readSel1<3>    |dataOut1<22>   |    6.154|
+readSel1<3>    |dataOut1<23>   |    5.763|
+readSel1<3>    |dataOut1<24>   |    6.020|
+readSel1<3>    |dataOut1<25>   |    5.884|
+readSel1<3>    |dataOut1<26>   |    5.849|
+readSel1<3>    |dataOut1<27>   |    6.048|
+readSel1<3>    |dataOut1<28>   |    5.536|
+readSel1<3>    |dataOut1<29>   |    5.484|
+readSel1<3>    |dataOut1<30>   |    5.664|
+readSel1<3>    |dataOut1<31>   |    5.432|
+readSel1<4>    |dataOut1<0>    |    7.130|
+readSel1<4>    |dataOut1<1>    |    7.364|
+readSel1<4>    |dataOut1<2>    |    7.268|
+readSel1<4>    |dataOut1<3>    |    7.177|
+readSel1<4>    |dataOut1<4>    |    7.346|
+readSel1<4>    |dataOut1<5>    |    7.041|
+readSel1<4>    |dataOut1<6>    |    7.021|
+readSel1<4>    |dataOut1<7>    |    6.921|
+readSel1<4>    |dataOut1<8>    |    6.897|
+readSel1<4>    |dataOut1<9>    |    6.783|
+readSel1<4>    |dataOut1<10>   |    6.751|
+readSel1<4>    |dataOut1<11>   |    6.660|
+readSel1<4>    |dataOut1<12>   |    6.628|
+readSel1<4>    |dataOut1<13>   |    6.535|
+readSel1<4>    |dataOut1<14>   |    6.508|
+readSel1<4>    |dataOut1<15>   |    6.430|
+readSel1<4>    |dataOut1<16>   |    6.406|
+readSel1<4>    |dataOut1<17>   |    6.309|
+readSel1<4>    |dataOut1<18>   |    6.288|
+readSel1<4>    |dataOut1<19>   |    6.169|
+readSel1<4>    |dataOut1<20>   |    6.150|
+readSel1<4>    |dataOut1<21>   |    6.027|
+readSel1<4>    |dataOut1<22>   |    6.014|
+readSel1<4>    |dataOut1<23>   |    5.623|
+readSel1<4>    |dataOut1<24>   |    5.880|
+readSel1<4>    |dataOut1<25>   |    5.744|
+readSel1<4>    |dataOut1<26>   |    5.709|
+readSel1<4>    |dataOut1<27>   |    5.908|
+readSel1<4>    |dataOut1<28>   |    5.396|
+readSel1<4>    |dataOut1<29>   |    5.344|
+readSel1<4>    |dataOut1<30>   |    5.524|
+readSel1<4>    |dataOut1<31>   |    5.292|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Apr 05 01:05:13 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 473 MB
+
+
+

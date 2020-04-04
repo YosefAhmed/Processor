@@ -1,0 +1,4 @@
+work	"ComponentsPackage.vhd"
+work	"GenericReg.vhd"
+work	"Reg_File.vhd"
+work	"muxRegFile32x1.vhd"

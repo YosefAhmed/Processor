@@ -5,19 +5,146 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">readSel1</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">writeSel</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">readSel2</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">writeData</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">writeSel</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">writeEnable</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">writeData</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="2146" delta="new" >In block &lt;<arg fmt="%s" index="1">Reg_File</arg>&gt;, <arg fmt="%s" index="2">Counter</arg> &lt;<arg fmt="%s" index="3">reg31/temp</arg>&gt; </msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_31</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">writeEnable</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_30</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_29</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_28</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_27</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_26</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_25</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_24</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_23</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_22</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_21</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_20</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_19</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_18</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_17</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_16</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_15</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_14</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_13</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_12</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_11</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_10</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_9</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_8</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_7</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_6</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_5</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_4</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_3</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_2</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_1</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">reg31/temp_0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Reg_File</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">reg31/temp_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Reg_File</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;reg31/temp_1&gt; &lt;reg31/temp_2&gt; &lt;reg31/temp_3&gt; &lt;reg31/temp_4&gt; &lt;reg31/temp_5&gt; &lt;reg31/temp_6&gt; &lt;reg31/temp_7&gt; &lt;reg31/temp_8&gt; &lt;reg31/temp_9&gt; &lt;reg31/temp_10&gt; &lt;reg31/temp_11&gt; &lt;reg31/temp_12&gt; &lt;reg31/temp_13&gt; &lt;reg31/temp_14&gt; &lt;reg31/temp_15&gt; &lt;reg31/temp_16&gt; &lt;reg31/temp_17&gt; &lt;reg31/temp_18&gt; &lt;reg31/temp_19&gt; &lt;reg31/temp_20&gt; &lt;reg31/temp_21&gt; &lt;reg31/temp_22&gt; &lt;reg31/temp_23&gt; &lt;reg31/temp_24&gt; &lt;reg31/temp_25&gt; &lt;reg31/temp_26&gt; &lt;reg31/temp_27&gt; &lt;reg31/temp_28&gt; &lt;reg31/temp_29&gt; &lt;reg31/temp_30&gt; &lt;reg31/temp_31&gt; </arg>
 </msg>
 
 </messages>
