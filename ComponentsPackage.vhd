@@ -36,12 +36,14 @@ sum : out STD_LOGIC
 );
 end component;
 
+
 component mux2x1 is
     Port ( I0 : in  STD_LOGIC;
            I1 : in  STD_LOGIC;
            S : in  STD_LOGIC;
            O : out  STD_LOGIC);
 end component;
+
 
 component mux4x1 is
     Port ( I0 : in  STD_LOGIC;

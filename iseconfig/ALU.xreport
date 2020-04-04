@@ -1,15 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-<<<<<<< HEAD
-  <DateModified>2020-04-04T17:18:56</DateModified>
-=======
-  <DateModified>2020-04-02T19:33:11</DateModified>
->>>>>>> d7ee4248bbed23d66a5fe199d7ac7f023d7bd112
+  <DateModified>2020-04-04T18:16:40</DateModified>
   <ModuleName>ALU</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/Projects/github/Processor/iseconfig/ALU.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Projects/github/Processor\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Projects/Processor-master/iseconfig/ALU.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Projects/Processor-master\</ImplementationReportsDirectory>
   <DateInitialized>2020-03-31T20:08:42</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

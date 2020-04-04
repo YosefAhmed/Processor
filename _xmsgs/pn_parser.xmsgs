@@ -8,11 +8,7 @@
 <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<<<<<<< HEAD
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/Projects/github/Processor/ComponentsPackage.vhd&quot; into library work</arg>
-=======
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/3rd term/second term/Archi/Project/Milestone1/processor/Processor/Adder.vhd&quot; into library work</arg>
->>>>>>> d7ee4248bbed23d66a5fe199d7ac7f023d7bd112
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/Projects/Processor-master/ComponentsPackage.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
