@@ -1,0 +1,2 @@
+vhdl work "ComponentsPackage.vhd"
+vhdl work "Reg_File.vhd"
