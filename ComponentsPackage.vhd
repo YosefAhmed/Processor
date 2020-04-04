@@ -53,7 +53,6 @@ component mux4x1 is
 end component;
 
 
-
 component muxRegFile32x1 is
 PORT(	I0: 	IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		I1: 	IN STD_LOGIC_VECTOR(31 DOWNTO 0);
