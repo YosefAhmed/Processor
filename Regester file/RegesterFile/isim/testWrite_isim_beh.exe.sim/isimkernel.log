@@ -2,27 +2,27 @@ Command line:
    testWrite_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  65328
+     -socket  49706
 
-Sun Apr 05 20:31:38 2020
+Mon Apr 06 00:11:04 2020
 
 
  Elaboration Time: 0.0625 sec
 
- Current Memory Usage: 841.167 Meg
+ Current Memory Usage: 841.073 Meg
 
- Total Signals          : 409
- Total Nets             : 2289
- Total Signal Drivers   : 74
- Total Blocks           : 42
- Total Primitive Blocks : 40
- Total Processes        : 70
- Total Traceable Variables  : 48
- Total Scalar Nets and Variables : 2823
+ Total Signals          : 415
+ Total Nets             : 2354
+ Total Signal Drivers   : 77
+ Total Blocks           : 41
+ Total Primitive Blocks : 39
+ Total Processes        : 73
+ Total Traceable Variables  : 43
+ Total Scalar Nets and Variables : 2765
 
  Total Simulation Time: 0.109375 sec
 
- Current Memory Usage: 841.167 Meg
+ Current Memory Usage: 841.073 Meg
 
-Sun Apr 05 20:31:42 2020
+Mon Apr 06 00:11:17 2020
 

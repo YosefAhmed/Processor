@@ -66,14 +66,14 @@ LAB3:    t2 = (t0 + 2212);
 
 LAB1:    return;
 LAB2:    xsi_set_current_line(22, ng0);
-    t4 = (t0 + 776U);
+    t4 = (t0 + 868U);
     t8 = *((char **)t4);
     t9 = *((unsigned char *)t8);
     t10 = (t9 == (unsigned char)3);
     if (t10 != 0)
         goto LAB8;
 
-LAB10:    t2 = (t0 + 868U);
+LAB10:    t2 = (t0 + 776U);
     t4 = *((char **)t2);
     t1 = *((unsigned char *)t4);
     t3 = (t1 == (unsigned char)3);

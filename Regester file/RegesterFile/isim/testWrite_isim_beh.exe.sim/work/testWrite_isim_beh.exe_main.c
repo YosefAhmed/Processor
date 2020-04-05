@@ -19,7 +19,6 @@ char *STD_STANDARD;
 char *IEEE_P_3499444699;
 char *IEEE_P_3620187407;
 char *WORK_P_2577740326;
-char *IEEE_P_1242562249;
 
 
 int main(int argc, char **argv)
@@ -32,7 +31,6 @@ int main(int argc, char **argv)
     ieee_p_3499444699_init();
     ieee_p_3620187407_init();
     work_p_2577740326_init();
-    ieee_p_1242562249_init();
     work_a_0143937076_3212880686_init();
     work_a_0384818659_3212880686_init();
     work_a_4090153325_3212880686_init();
@@ -48,7 +46,6 @@ int main(int argc, char **argv)
     IEEE_P_3499444699 = xsi_get_engine_memory("ieee_p_3499444699");
     IEEE_P_3620187407 = xsi_get_engine_memory("ieee_p_3620187407");
     WORK_P_2577740326 = xsi_get_engine_memory("work_p_2577740326");
-    IEEE_P_1242562249 = xsi_get_engine_memory("ieee_p_1242562249");
 
     return xsi_run_simulation(argc, argv);
 

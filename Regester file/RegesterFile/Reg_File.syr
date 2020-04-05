@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: Reg_File.prj
 
@@ -125,6 +125,7 @@ Parsing architecture <Behavioral> of entity <reg_file>.
 =========================================================================
 
 Elaborating entity <Reg_File> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd" Line 57: Using initial value "00000000000000000000000000000000" for regenable since it is never assigned
 
 Elaborating entity <reg> (architecture <Behavioral>) with generics from library <work>.
 
@@ -132,6 +133,9 @@ Elaborating entity <muxRegFile32x1> (architecture <Behavioral>) from library <wo
 
 Elaborating entity <Decoder32> (architecture <Behavioral>) from library <work>.
 WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 25: i should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 28: i should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd" Line 103: regenable should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd" Line 106: regnum should be on the sensitivity list of the process
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -139,7 +143,6 @@ WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterF
 
 Synthesizing Unit <Reg_File>.
     Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd".
-WARNING:Xst:647 - Input <write_ena> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <Reg_File> synthesized.
@@ -228,10 +231,41 @@ Unit <muxRegFile32x1> synthesized.
 
 Synthesizing Unit <Decoder32>.
     Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd".
-WARNING:Xst:647 - Input <I<4:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit tristate buffer for signal <O<31>> created at line 22
+    Found 1-bit tristate buffer for signal <O<30>> created at line 22
+    Found 1-bit tristate buffer for signal <O<29>> created at line 22
+    Found 1-bit tristate buffer for signal <O<28>> created at line 22
+    Found 1-bit tristate buffer for signal <O<27>> created at line 22
+    Found 1-bit tristate buffer for signal <O<26>> created at line 22
+    Found 1-bit tristate buffer for signal <O<25>> created at line 22
+    Found 1-bit tristate buffer for signal <O<24>> created at line 22
+    Found 1-bit tristate buffer for signal <O<23>> created at line 22
+    Found 1-bit tristate buffer for signal <O<22>> created at line 22
+    Found 1-bit tristate buffer for signal <O<21>> created at line 22
+    Found 1-bit tristate buffer for signal <O<20>> created at line 22
+    Found 1-bit tristate buffer for signal <O<19>> created at line 22
+    Found 1-bit tristate buffer for signal <O<18>> created at line 22
+    Found 1-bit tristate buffer for signal <O<17>> created at line 22
+    Found 1-bit tristate buffer for signal <O<16>> created at line 22
+    Found 1-bit tristate buffer for signal <O<15>> created at line 22
+    Found 1-bit tristate buffer for signal <O<14>> created at line 22
+    Found 1-bit tristate buffer for signal <O<13>> created at line 22
+    Found 1-bit tristate buffer for signal <O<12>> created at line 22
+    Found 1-bit tristate buffer for signal <O<11>> created at line 22
+    Found 1-bit tristate buffer for signal <O<10>> created at line 22
+    Found 1-bit tristate buffer for signal <O<9>> created at line 22
+    Found 1-bit tristate buffer for signal <O<8>> created at line 22
+    Found 1-bit tristate buffer for signal <O<7>> created at line 22
+    Found 1-bit tristate buffer for signal <O<6>> created at line 22
+    Found 1-bit tristate buffer for signal <O<5>> created at line 22
+    Found 1-bit tristate buffer for signal <O<4>> created at line 22
+    Found 1-bit tristate buffer for signal <O<3>> created at line 22
+    Found 1-bit tristate buffer for signal <O<2>> created at line 22
+    Found 1-bit tristate buffer for signal <O<1>> created at line 22
+    Found 1-bit tristate buffer for signal <O<0>> created at line 22
     Summary:
-	no macro.
+	inferred  32 Tristate(s).
 Unit <Decoder32> synthesized.
 
 =========================================================================
@@ -245,8 +279,10 @@ Macro Statistics
 # Multiplexers                                         : 96
  1-bit 32-to-1 multiplexer                             : 64
  32-bit 2-to-1 multiplexer                             : 32
-# Tristates                                            : 64
- 1-bit tristate buffer                                 : 64
+# Tristates                                            : 96
+ 1-bit tristate buffer                                 : 96
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
 
 =========================================================================
 
@@ -254,8 +290,1030 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <dec> is unconnected in block <Reg_File>.
-   It will be removed from the design.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg21>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg23>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg29>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg26>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg25>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg28>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg27>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_0> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_1> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_2> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_3> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_4> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_5> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_6> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_7> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_13> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_14> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_15> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_16> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_17> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_18> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_20> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_21> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_22> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_23> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_24> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_25> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_26> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_27> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_28> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_29> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_30> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_31> has a constant value of 0 in block <reg11>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <reg>.
 The following registers are absorbed into counter <temp>: 1 register on signal <temp>.
@@ -269,61 +1327,91 @@ Macro Statistics
  32-bit up counter                                     : 32
 # Multiplexers                                         : 64
  1-bit 32-to-1 multiplexer                             : 64
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2146 - In block <Reg_File>, Counter <reg31/temp> <reg32/temp> <reg28/temp> <reg30/temp> <reg29/temp> <reg25/temp> <reg27/temp> <reg26/temp> <reg22/temp> <reg24/temp> <reg23/temp> <reg19/temp> <reg21/temp> <reg20/temp> <reg16/temp> <reg18/temp> <reg17/temp> <reg13/temp> <reg15/temp> <reg14/temp> <reg10/temp> <reg12/temp> <reg11/temp> <reg7/temp> <reg9/temp> <reg8/temp> <reg4/temp> <reg6/temp> <reg5/temp> <reg1/temp> <reg3/temp> <reg2/temp> are equivalent, XST will keep only <reg31/temp>.
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg2> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg3> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg4> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg5> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg6> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg7> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg8> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg9> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg10> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg11> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg12> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg13> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg14> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg15> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg16> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg17> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg18> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg19> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg20> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg21> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg22> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg23> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg24> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg25> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg26> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg27> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg28> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg29> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg30> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg31> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Reg_File>: instances <reg1>, <reg32> of unit <reg> are equivalent, second instance is removed
+WARNING:Xst:1293 - FF/Latch <reg1/temp_31> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_30> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_29> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_28> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_27> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_26> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_25> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_24> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_23> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_22> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_21> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_20> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_19> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_18> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_17> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_16> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_15> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_14> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_13> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_12> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_11> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_10> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_9> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_8> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_7> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_6> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_5> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_4> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_3> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_2> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_1> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg1/temp_0> has a constant value of 0 in block <Reg_File>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2042 - Unit Reg_File: 32 internal tristates are replaced by logic (pull-up yes): N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N2, N20, N21, N22, N23, N24, N25, N26, N27, N28, N29, N3, N30, N31, N32, N33, N4, N5, N6, N7, N8, N9.
 
 Optimizing unit <Reg_File> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Reg_File, actual ratio is 0.
-FlipFlop reg31/temp_31 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_30 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_29 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_28 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_27 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_26 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_25 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_24 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_23 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_22 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_21 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_20 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_19 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_18 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_17 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_16 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_15 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_14 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_13 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_12 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_11 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_10 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_9 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_8 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_7 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_6 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_5 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_4 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_3 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_2 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_1 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop reg31/temp_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Macro Statistics
-# Registers                                            : 64
- Flip-Flops                                            : 64
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -345,17 +1433,16 @@ Top Level Output File Name         : Reg_File.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 34
+# BELS                             : 13
 #      GND                         : 1
-#      VCC                         : 1
-#      XORCY                       : 32
-# FlipFlops/Latches                : 64
-#      FDRE                        : 64
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 96
-#      IBUF                        : 32
-#      OBUF                        : 64
+#      LUT3                        : 5
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 5
+# IO Buffers                       : 135
+#      IBUF                        : 6
+#      OBUF                        : 97
+#      OBUFT                       : 32
 
 Device utilization summary:
 ---------------------------
@@ -364,21 +1451,21 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice LUTs:                   12  out of  63400     0%  
+    Number used as Logic:                12  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     12
+   Number with an unused Flip Flop:      12  out of     12   100%  
+   Number with an unused LUT:             0  out of     12     0%  
+   Number of fully used LUT-FF pairs:     0  out of     12     0%  
+   Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                         113
- Number of bonded IOBs:                  97  out of    210    46%  
-    IOB Flip Flops/Latches:              64
+ Number of IOs:                         178
+ Number of bonded IOBs:                 135  out of    210    64%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of    128     0%  
 
 ---------------------------
 Partition Resource Summary:
@@ -398,11 +1485,7 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 64    |
------------------------------------+------------------------+-------+
+No clock signals found in this design
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -413,52 +1496,32 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 0.182ns
-   Maximum output required time after clock: 0.640ns
-   Maximum combinational path delay: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 1.218ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 64 / 64
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 365 / 64
 -------------------------------------------------------------------------
-Offset:              0.182ns (Levels of Logic = 2)
-  Source:            write_data<0> (PAD)
-  Destination:       reg31/temp_0 (FF)
-  Destination Clock: clk rising
+Delay:               1.218ns (Levels of Logic = 3)
+  Source:            write_sel<2> (PAD)
+  Destination:       tmp2<31> (PAD)
 
-  Data Path: write_data<0> to reg31/temp_0
+  Data Path: write_sel<2> to tmp2<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             0   0.001   0.000  write_data_0_IBUF (reg31/Mcount_temp_lut<0>)
-     XORCY:LI->O           2   0.173   0.000  reg31/Mcount_temp_xor<0> (reg31/Mcount_temp)
-     FDRE:D                    0.008          reg31/temp_0
+     IBUF:I->O            12   0.001   0.734  write_sel_2_IBUF (write_sel_2_IBUF)
+     LUT5:I0->O           32   0.097   0.386  dec/I[4]_INV_6_o_inv1 (dec/I[4]_INV_6_o_inv)
+     OBUFT:T->O                0.000          tmp2_31_OBUFT (tmp2<31>)
     ----------------------------------------
-    Total                      0.182ns (0.182ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 64 / 64
--------------------------------------------------------------------------
-Offset:              0.640ns (Levels of Logic = 1)
-  Source:            reg31/temp_31_1 (FF)
-  Destination:       data1<31> (PAD)
-  Source Clock:      clk rising
-
-  Data Path: reg31/temp_31_1 to data1<31>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q             1   0.361   0.279  reg31/temp_31_1 (reg31/temp_31_1)
-     OBUF:I->O                 0.000          data1_31_OBUF (data1<31>)
-    ----------------------------------------
-    Total                      0.640ns (0.361ns logic, 0.279ns route)
-                                       (56.4% logic, 43.6% route)
+    Total                      1.218ns (0.098ns logic, 1.120ns route)
+                                       (8.0% logic, 92.0% route)
 
 =========================================================================
 
@@ -468,14 +1531,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.39 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.98 secs
  
 --> 
 
-Total memory usage is 352364 kilobytes
+Total memory usage is 301484 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings : 1094 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

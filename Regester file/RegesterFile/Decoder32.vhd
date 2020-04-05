@@ -4,7 +4,7 @@
 	use IEEE.STD_LOGIC_1164.ALL;
 	use work.ComponentsPackage.all;
 	use ieee.std_logic_unsigned.all;
-	use ieee.numeric_std.all;
+--	use ieee.numeric_std.all;
 
 
 	entity Decoder32 is
@@ -22,9 +22,13 @@
 	process(clk)
 	variable tmp: integer range 0 to 4;
 	begin
-	tmp := CONV_INTEGER(I);
-			O <=  (others => '0');
-			O(tmp) <=  '1';
+	if(I = "ZZZZZ")then
+		O <= (others => 'Z');
+	else
+		tmp := CONV_INTEGER(I);
+		O <=  (others => '0');
+		O(tmp) <=  '1';
+	end if;
 	end process;
 
 	end Behavioral;

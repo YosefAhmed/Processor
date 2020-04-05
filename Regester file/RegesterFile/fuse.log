@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe -prj F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_beh.prj work.testWrite 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe" -prj "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_beh.prj" "work.testWrite" 
 ISim P.58f (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -11,22 +11,21 @@ Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg
 Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 161404 KB
-Fuse CPU Usage: 375 ms
+Fuse Memory Usage: 160724 KB
+Fuse CPU Usage: 264 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling package componentspackage
-Compiling package numeric_std
 Compiling architecture behavioral of entity reg [\reg(32)\]
 Compiling architecture behavioral of entity muxRegFile32x1 [muxregfile32x1_default]
 Compiling architecture behavioral of entity Decoder32 [decoder32_default]
 Compiling architecture behavioral of entity Reg_File [reg_file_default]
 Compiling architecture behavior of entity testwrite
 Time Resolution for simulation is 1ps.
-Waiting for 3 sub-compilation(s) to finish...
-Compiled 15 VHDL Units
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 14 VHDL Units
 Built simulation executable F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe
-Fuse Memory Usage: 183328 KB
-Fuse CPU Usage: 702 ms
+Fuse Memory Usage: 178644 KB
+Fuse CPU Usage: 452 ms

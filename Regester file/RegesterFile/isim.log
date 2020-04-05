@@ -8,6 +8,37 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 140 ns: Note: Test1 (/testwrite/).
-at 140 ns: Error: 1:Fail
-at 140 ns: Note: Test2 (/testwrite/).
+at 49997 ps: Note: Test1 (/testwrite/).
+at 49997 ps: Error: 1:Fail
+at 49997 ps: Note: Test2 (/testwrite/).
+at 49997 ps: Error: 2:Fail
+ISim P.58f (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 49997 ps: Note: Test1 (/testwrite/).
+at 49997 ps: Error: 1:Fail
+at 49997 ps: Note: Test2 (/testwrite/).
+at 49997 ps: Error: 2:Fail
+ISim P.58f (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testwrite/uut/dec/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /testwrite/uut/dec/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 5 ns(1), Instance /testwrite/uut/dec/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 49997 ps: Note: Test1 (/testwrite/).
+at 49997 ps: Error: 1:Fail
+at 49997 ps: Note: Test2 (/testwrite/).
+at 49997 ps: Error: 2:Fail
+ISim P.58f (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 49997 ps: Note: Test1 (/testwrite/).
+at 49997 ps: Error: 1:Fail
+at 49997 ps: Note: Test2 (/testwrite/).
+at 49997 ps: Error: 2:Fail
