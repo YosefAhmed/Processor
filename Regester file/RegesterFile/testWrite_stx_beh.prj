@@ -1,0 +1,6 @@
+vhdl isim_temp "ComponentsPackage.vhd"
+vhdl isim_temp "muxRegFile32x1.vhd"
+vhdl isim_temp "GenericReg.vhd"
+vhdl isim_temp "Decoder32.vhd"
+vhdl isim_temp "Reg_File.vhd"
+vhdl isim_temp "testWrite.vhd"
