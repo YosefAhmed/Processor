@@ -2,14 +2,14 @@ Command line:
    ALUTest_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  61061
+     -socket  49855
 
-Sun Apr 05 22:06:56 2020
+Mon Apr 06 01:03:15 2020
 
 
- Elaboration Time: 0.078125 sec
+ Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 841.245 Meg
+ Current Memory Usage: 841.056 Meg
 
  Total Signals          : 243
  Total Nets             : 425
@@ -20,9 +20,9 @@ Sun Apr 05 22:06:56 2020
  Total Traceable Variables  : 10
  Total Scalar Nets and Variables : 803
 
- Total Simulation Time: 0.125 sec
+ Total Simulation Time: 0.171875 sec
 
- Current Memory Usage: 1156.34 Meg
+ Current Memory Usage: 841.056 Meg
 
-Sun Apr 05 22:07:42 2020
+Mon Apr 06 01:03:21 2020
 

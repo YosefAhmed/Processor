@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/mux2x1.vhd";
+static const char *ng0 = "F:/programming/VHDL/Milestone1/ALU/ALU/mux2x1.vhd";
 
 
 
@@ -74,7 +74,7 @@ LAB4:    xsi_set_current_line(18, ng0);
     goto LAB2;
 
 LAB5:    xsi_set_current_line(19, ng0);
-    t1 = (t0 + 3197);
+    t1 = (t0 + 3053);
     t4 = (t0 + 1768);
     t5 = (t4 + 32U);
     t6 = *((char **)t5);

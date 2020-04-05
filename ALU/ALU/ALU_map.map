@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Sun Apr 05 21:30:12 2020
+Mapped Date    : Mon Apr 06 01:00:28 2020
 
 WARNING:LIT:701 - PAD symbol "dataout<31>" has an undefined IOSTANDARD.
 WARNING:LIT:702 - PAD symbol "dataout<31>" is not constrained (LOC) to a
@@ -22,52 +22,52 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 20 secs 
-Total CPU  time at the beginning of Placer: 18 secs 
+Total REAL time at the beginning of Placer: 21 secs 
+Total CPU  time at the beginning of Placer: 20 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:76b2) REAL time: 22 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:77a9) REAL time: 22 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:76b2) REAL time: 22 secs 
+Phase 2.7  Design Feasibility Check (Checksum:77a9) REAL time: 23 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:76b2) REAL time: 22 secs 
+Phase 3.31  Local Placement Optimization (Checksum:77a9) REAL time: 23 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 ....
-Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:76b2) REAL time: 24 secs 
+Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:77a9) REAL time: 25 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:76b2) REAL time: 24 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:77a9) REAL time: 25 secs 
 
 Phase 6.3  Local Placement Optimization
 ....
-Phase 6.3  Local Placement Optimization (Checksum:3b40bf77) REAL time: 26 secs 
+Phase 6.3  Local Placement Optimization (Checksum:29af286f) REAL time: 27 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:3b40bf77) REAL time: 26 secs 
+Phase 7.5  Local Placement Optimization (Checksum:29af286f) REAL time: 27 secs 
 
 Phase 8.8  Global Placement
-....
+...
 ................
 ................
-Phase 8.8  Global Placement (Checksum:a05a7eee) REAL time: 26 secs 
+Phase 8.8  Global Placement (Checksum:e4056bc2) REAL time: 27 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:a05a7eee) REAL time: 26 secs 
+Phase 9.5  Local Placement Optimization (Checksum:e4056bc2) REAL time: 27 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:c308e0ba) REAL time: 28 secs 
+Phase 10.18  Placement Optimization (Checksum:1e0a5883) REAL time: 29 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:c308e0ba) REAL time: 28 secs 
+Phase 11.5  Local Placement Optimization (Checksum:1e0a5883) REAL time: 29 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:c308e0ba) REAL time: 28 secs 
+Phase 12.34  Placement Validation (Checksum:1e0a5883) REAL time: 29 secs 
 
-Total REAL time to Placer completion: 28 secs 
-Total CPU  time to Placer completion: 25 secs 
+Total REAL time to Placer completion: 29 secs 
+Total CPU  time to Placer completion: 28 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:2452 - The IOB data2<28> is either not constrained (LOC)
@@ -505,6 +505,11 @@ WARNING:PhysDesignRules:2452 - The IOB data1<29> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB oflag is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB aluop<3> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
@@ -591,20 +596,20 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:  105
+Number of warnings:  106
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of 126,800    0%
   Number of Slice LUTs:                         72 out of  63,400    1%
     Number used as logic:                       72 out of  63,400    1%
-      Number using O6 output only:              72
+      Number using O6 output only:              71
       Number using O5 output only:               0
-      Number using O5 and O6:                    0
+      Number using O5 and O6:                    1
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    36 out of  15,850    1%
+  Number of occupied Slices:                    43 out of  15,850    1%
   Number of LUT Flip Flop pairs used:           72
     Number with an unused Flip Flop:            72 out of      72  100%
     Number with an unused LUT:                   0 out of      72    0%
@@ -621,7 +626,7 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       103 out of     210   49%
+  Number of bonded IOBs:                       104 out of     210   49%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
@@ -654,11 +659,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.46
+Average Fanout of Non-Clock Nets:                3.44
 
-Peak Memory Usage:  594 MB
-Total REAL time to MAP completion:  30 secs 
-Total CPU time to MAP completion:   28 secs 
+Peak Memory Usage:  593 MB
+Total REAL time to MAP completion:  32 secs 
+Total CPU time to MAP completion:   31 secs 
 
 Mapping completed.
 See MAP report file "ALU_map.mrp" for details.

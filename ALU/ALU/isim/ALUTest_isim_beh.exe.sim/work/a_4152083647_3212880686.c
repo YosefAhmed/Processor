@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/zeroflag.vhd";
+static const char *ng0 = "F:/programming/VHDL/Milestone1/ALU/ALU/zeroflag.vhd";
 
 
 
@@ -43,7 +43,7 @@ static void work_a_4152083647_3212880686_p_0(char *t0)
 LAB0:    xsi_set_current_line(42, ng0);
     t1 = (t0 + 592U);
     t2 = *((char **)t1);
-    t1 = (t0 + 2820);
+    t1 = (t0 + 2712);
     t4 = 1;
     if (32U == 32U)
         goto LAB5;

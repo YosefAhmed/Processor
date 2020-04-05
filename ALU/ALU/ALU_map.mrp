@@ -10,25 +10,25 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Sun Apr 05 21:30:12 2020
+Mapped Date    : Mon Apr 06 01:00:28 2020
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  105
+Number of warnings:  106
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of 126,800    0%
   Number of Slice LUTs:                         72 out of  63,400    1%
     Number used as logic:                       72 out of  63,400    1%
-      Number using O6 output only:              72
+      Number using O6 output only:              71
       Number using O5 output only:               0
-      Number using O5 and O6:                    0
+      Number using O5 and O6:                    1
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    36 out of  15,850    1%
+  Number of occupied Slices:                    43 out of  15,850    1%
   Number of LUT Flip Flop pairs used:           72
     Number with an unused Flip Flop:            72 out of      72  100%
     Number with an unused LUT:                   0 out of      72    0%
@@ -45,7 +45,7 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       103 out of     210   49%
+  Number of bonded IOBs:                       104 out of     210   49%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
@@ -78,11 +78,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.46
+Average Fanout of Non-Clock Nets:                3.44
 
-Peak Memory Usage:  594 MB
-Total REAL time to MAP completion:  30 secs 
-Total CPU time to MAP completion:   28 secs 
+Peak Memory Usage:  593 MB
+Total REAL time to MAP completion:  32 secs 
+Total CPU time to MAP completion:   31 secs 
 
 Table of Contents
 -----------------
@@ -543,6 +543,11 @@ WARNING:PhysDesignRules:2452 - The IOB data1<29> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB oflag is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB aluop<3> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
@@ -626,7 +631,6 @@ WARNING:PhysDesignRules:2452 - The IOB data2<27> is either not constrained (LOC)
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network oflag has no load.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
@@ -753,6 +757,7 @@ Section 6 - IOB Properties
 | dataout<29>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | dataout<30>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | dataout<31>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| oflag                              | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | zflag                              | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 

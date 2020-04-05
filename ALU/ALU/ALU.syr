@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
  
 --> Reading design: ALU.prj
 
@@ -105,33 +105,33 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\Adder.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\Adder.vhd" into library work
 Parsing entity <adder>.
 Parsing architecture <Behavioral> of entity <adder>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\zeroflag.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\zeroflag.vhd" into library work
 Parsing entity <zeroflag>.
 Parsing architecture <Behavioral> of entity <zeroflag>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\or32.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\or32.vhd" into library work
 Parsing entity <or32>.
 Parsing architecture <Behavioral> of entity <or32>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\not32.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\not32.vhd" into library work
 Parsing entity <not32>.
 Parsing architecture <Behavioral> of entity <not32>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux4x1.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\mux4x1.vhd" into library work
 Parsing entity <mux4x1>.
 Parsing architecture <Behavioral> of entity <mux4x1>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux2x1.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\mux2x1.vhd" into library work
 Parsing entity <mux2x1>.
 Parsing architecture <Behavioral> of entity <mux2x1>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\ComponentsPackage.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\ComponentsPackage.vhd" into library work
 Parsing package <ComponentsPackage>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\and32.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\and32.vhd" into library work
 Parsing entity <and32>.
 Parsing architecture <Behavioral> of entity <and32>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\adder32.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\adder32.vhd" into library work
 Parsing entity <adder32>.
 Parsing architecture <Behavioral> of entity <adder32>.
-Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\ALU.vhd" into library work
+Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\ALU.vhd" into library work
 Parsing entity <ALU>.
 Parsing architecture <Behavioral> of entity <alu>.
 
@@ -148,7 +148,7 @@ Elaborating entity <and32> (architecture <Behavioral>) from library <work>.
 Elaborating entity <or32> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <mux2x1> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux2x1.vhd" Line 19. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "F:\programming\VHDL\Milestone1\ALU\ALU\mux2x1.vhd" Line 19. Case statement is complete. others clause is never selected
 
 Elaborating entity <adder32> (architecture <Behavioral>) from library <work>.
 
@@ -163,48 +163,47 @@ Elaborating entity <zeroflag> (architecture <Behavioral>) from library <work>.
 =========================================================================
 
 Synthesizing Unit <ALU>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\ALU.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\ALU.vhd".
     Summary:
 	no macro.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <not32>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\not32.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\not32.vhd".
     Summary:
 	no macro.
 Unit <not32> synthesized.
 
 Synthesizing Unit <and32>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\and32.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\and32.vhd".
     Summary:
 	no macro.
 Unit <and32> synthesized.
 
 Synthesizing Unit <or32>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\or32.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\or32.vhd".
     Summary:
 	no macro.
 Unit <or32> synthesized.
 
 Synthesizing Unit <mux2x1>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux2x1.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\mux2x1.vhd".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <mux2x1> synthesized.
 
 Synthesizing Unit <adder32>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\adder32.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\adder32.vhd".
     Summary:
-	no macro.
 Unit <adder32> synthesized.
 
 Synthesizing Unit <adder>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\Adder.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\Adder.vhd".
     Summary:
 Unit <adder> synthesized.
 
 Synthesizing Unit <mux4x1>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux4x1.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\mux4x1.vhd".
     Found 1-bit tristate buffer for signal <O<31>> created at line 18
     Found 1-bit tristate buffer for signal <O<30>> created at line 18
     Found 1-bit tristate buffer for signal <O<29>> created at line 18
@@ -243,7 +242,7 @@ Synthesizing Unit <mux4x1>.
 Unit <mux4x1> synthesized.
 
 Synthesizing Unit <zeroflag>.
-    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\zeroflag.vhd".
+    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\zeroflag.vhd".
     Summary:
 	no macro.
 Unit <zeroflag> synthesized.
@@ -257,8 +256,9 @@ Macro Statistics
  32-bit 2-to-1 multiplexer                             : 1
 # Tristates                                            : 32
  1-bit tristate buffer                                 : 32
-# Xors                                                 : 64
+# Xors                                                 : 65
  1-bit xor2                                            : 64
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -274,8 +274,9 @@ Macro Statistics
 # Multiplexers                                         : 97
  1-bit 2-to-1 multiplexer                              : 96
  32-bit 2-to-1 multiplexer                             : 1
-# Xors                                                 : 64
+# Xors                                                 : 65
  1-bit xor2                                            : 64
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -319,13 +320,14 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 72
+# BELS                             : 73
+#      LUT3                        : 1
 #      LUT4                        : 4
-#      LUT5                        : 2
-#      LUT6                        : 66
-# IO Buffers                       : 103
+#      LUT5                        : 1
+#      LUT6                        : 67
+# IO Buffers                       : 104
 #      IBUF                        : 69
-#      OBUF                        : 2
+#      OBUF                        : 3
 #      OBUFT                       : 32
 
 Device utilization summary:
@@ -335,19 +337,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   72  out of  63400     0%  
-    Number used as Logic:                72  out of  63400     0%  
+ Number of Slice LUTs:                   73  out of  63400     0%  
+    Number used as Logic:                73  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     72
-   Number with an unused Flip Flop:      72  out of     72   100%  
-   Number with an unused LUT:             0  out of     72     0%  
-   Number of fully used LUT-FF pairs:     0  out of     72     0%  
+ Number of LUT Flip Flop pairs used:     73
+   Number with an unused Flip Flop:      73  out of     73   100%  
+   Number with an unused LUT:             0  out of     73     0%  
+   Number of fully used LUT-FF pairs:     0  out of     73     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                         104
- Number of bonded IOBs:                 103  out of    210    49%  
+ Number of bonded IOBs:                 104  out of    210    49%  
 
 Specific Feature Utilization:
 
@@ -382,7 +384,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 8.498ns
+   Maximum combinational path delay: 9.116ns
 
 Timing Details:
 ---------------
@@ -390,9 +392,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3174 / 34
+  Total number of paths / destination ports: 3256 / 35
 -------------------------------------------------------------------------
-Delay:               8.498ns (Levels of Logic = 21)
+Delay:               9.116ns (Levels of Logic = 22)
   Source:            data1<1> (PAD)
   Destination:       zflag (PAD)
 
@@ -415,15 +417,16 @@ Delay:               8.498ns (Levels of Logic = 21)
      LUT6:I5->O            3   0.097   0.305  adding/p23/cout1 (adding/carry<22>)
      LUT6:I5->O            3   0.097   0.305  adding/p25/cout1 (adding/carry<24>)
      LUT6:I5->O            3   0.097   0.305  adding/p27/cout1 (adding/carry<26>)
-     LUT6:I5->O            3   0.097   0.521  adding/p29/cout1 (adding/carry<28>)
-     LUT6:I3->O            1   0.097   0.295  mux41/Mmux_S[3]_Z_13_o_Mux_3_o11 (mux41/Mmux_S[3]_Z_13_o_Mux_3_o1)
-     LUT6:I5->O            2   0.097   0.299  mux41/Mmux_S[3]_Z_13_o_Mux_3_o12 (dataout_30_OBUFT)
-     LUT5:I4->O            1   0.097   0.295  zero/output<31>10_SW0 (N74)
-     LUT6:I5->O            1   0.097   0.279  zero/output<31>10 (zflag_OBUF)
+     LUT6:I5->O            3   0.097   0.305  adding/p29/cout1 (adding/carry<28>)
+     LUT6:I5->O            3   0.097   0.305  adding/p31/cout1 (adding/carry<30>)
+     LUT6:I5->O            2   0.097   0.515  mux41/Mmux_S[3]_Z_13_o_Mux_1_o11 (dataout_31_OBUFT)
+     LUT3:I0->O            1   0.097   0.511  zero/output<31>2 (zero/output<31>1)
+     LUT6:I3->O            1   0.097   0.295  zero/output<31>9_SW0 (N70)
+     LUT6:I5->O            1   0.097   0.279  zero/output<31>9 (zflag_OBUF)
      OBUF:I->O                 0.000          zflag_OBUF (zflag)
     ----------------------------------------
-    Total                      8.498ns (1.844ns logic, 6.654ns route)
-                                       (21.7% logic, 78.3% route)
+    Total                      9.116ns (1.941ns logic, 7.175ns route)
+                                       (21.3% logic, 78.7% route)
 
 =========================================================================
 
@@ -433,12 +436,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.93 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.88 secs
  
 --> 
 
-Total memory usage is 352636 kilobytes
+Total memory usage is 350700 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

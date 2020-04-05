@@ -31,7 +31,8 @@
 	--use UNISIM.VComponents.all;
 
 	entity ALU is
-		 Port (    data1 : IN  std_logic_vector(31 downto 0);
+		 Port (  
+         data1 : IN  std_logic_vector(31 downto 0);
          data2 : IN  std_logic_vector(31 downto 0);
          aluop : IN  std_logic_vector(3 downto 0);
          cin : IN  std_logic;

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ALUTest_isim_beh.exe" -prj "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ALUTest_beh.prj" "work.ALUTest" 
+-intstyle "ise" -incremental -lib "secureip" -o "F:/programming/VHDL/Milestone1/ALU/ALU/ALUTest_isim_beh.exe" -prj "F:/programming/VHDL/Milestone1/ALU/ALU/ALUTest_beh.prj" "work.ALUTest" 
