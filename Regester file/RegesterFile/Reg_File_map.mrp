@@ -10,29 +10,34 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Mon Apr 06 00:02:09 2020
+Mapped Date    : Mon Apr 06 00:44:32 2020
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  137
+Number of warnings:  114
 Slice Logic Utilization:
-  Number of Slice Registers:                     0 out of 126,800    0%
-  Number of Slice LUTs:                          9 out of  63,400    1%
-    Number used as logic:                        9 out of  63,400    1%
-      Number using O6 output only:               6
+  Number of Slice Registers:                   192 out of 126,800    1%
+    Number used as Flip Flops:                 192
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        393 out of  63,400    1%
+    Number used as logic:                      393 out of  63,400    1%
+      Number using O6 output only:             204
       Number using O5 output only:               0
-      Number using O5 and O6:                    3
+      Number using O5 and O6:                  189
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                     5 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:            9
-    Number with an unused Flip Flop:             9 out of       9  100%
-    Number with an unused LUT:                   0 out of       9    0%
-    Number of fully used LUT-FF pairs:           0 out of       9    0%
+  Number of occupied Slices:                   169 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          393
+    Number with an unused Flip Flop:           201 out of     393   51%
+    Number with an unused LUT:                   0 out of     393    0%
+    Number of fully used LUT-FF pairs:         192 out of     393   48%
+    Number of unique control sets:               6
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,800    0%
 
@@ -45,12 +50,14 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       135 out of     210   64%
+  Number of bonded IOBs:                       112 out of     210   53%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
   Number of RAMB18E1/FIFO18E1s:                  0 out of     270    0%
-  Number of BUFG/BUFGCTRLs:                      0 out of      32    0%
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+    Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
@@ -78,11 +85,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                6.33
+Average Fanout of Non-Clock Nets:                4.14
 
-Peak Memory Usage:  596 MB
-Total REAL time to MAP completion:  52 secs 
-Total CPU time to MAP completion:   44 secs 
+Peak Memory Usage:  606 MB
+Total REAL time to MAP completion:  56 secs 
+Total CPU time to MAP completion:   54 secs 
 
 Table of Contents
 -----------------
@@ -105,15 +112,215 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:LIT:701 - PAD symbol "tmp2<31>" has an undefined IOSTANDARD.
-WARNING:LIT:702 - PAD symbol "tmp2<31>" is not constrained (LOC) to a specific
+WARNING:LIT:701 - PAD symbol "clk" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "clk" is not constrained (LOC) to a specific
    location.
-WARNING:PhysDesignRules:2452 - The IOB tmp<6> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB read_sel2<3> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB read_sel2<4> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB read_sel2<1> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB read_sel2<2> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB read_sel2<0> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<7> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<8> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<5> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<6> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<9> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<0> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<0> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<3> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<4> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<1> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<3> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<2> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<4> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<7> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<1> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<8> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<2> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<5> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<6> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<9> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<30> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<31> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<15> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<16> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data2<17> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<18> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<19> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_sel<0> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<10> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_sel<4> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<11> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_sel<3> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<12> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_sel<2> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<13> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_sel<1> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<14> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
@@ -123,32 +330,7 @@ WARNING:PhysDesignRules:2452 - The IOB data2<25> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<29> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<7> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<18> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data2<26> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<8> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<19> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
@@ -158,11 +340,6 @@ WARNING:PhysDesignRules:2452 - The IOB data2<27> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<9> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data2<28> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
@@ -173,236 +350,56 @@ WARNING:PhysDesignRules:2452 - The IOB data2<29> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<10> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data2<20> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB write_ena is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data2<21> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<11> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data2<22> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<12> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data2<23> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<20> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data2<24> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<13> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<21> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<14> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<22> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<30> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<15> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<23> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<31> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<0> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<16> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<24> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<1> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<17> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<25> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<2> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<18> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<26> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<3> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<19> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<27> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<0> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<4> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB write_sel<0> is either not constrained
+WARNING:PhysDesignRules:2452 - The IOB read_sel1<3> is either not constrained
    (LOC) to a specific location and/or has an undefined I/O Standard
    (IOSTANDARD). This condition may seriously affect the device and will be an
    error in bitstream creation. It should be corrected by properly specifying
    the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp3 is either not constrained (LOC) to a
-   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<28> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<1> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<5> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB write_sel<1> is either not constrained
+WARNING:PhysDesignRules:2452 - The IOB read_sel1<4> is either not constrained
    (LOC) to a specific location and/or has an undefined I/O Standard
    (IOSTANDARD). This condition may seriously affect the device and will be an
    error in bitstream creation. It should be corrected by properly specifying
    the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<29> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<2> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<6> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB write_sel<2> is either not constrained
+WARNING:PhysDesignRules:2452 - The IOB read_sel1<1> is either not constrained
    (LOC) to a specific location and/or has an undefined I/O Standard
    (IOSTANDARD). This condition may seriously affect the device and will be an
    error in bitstream creation. It should be corrected by properly specifying
    the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<3> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<7> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB write_sel<3> is either not constrained
+WARNING:PhysDesignRules:2452 - The IOB read_sel1<2> is either not constrained
    (LOC) to a specific location and/or has an undefined I/O Standard
    (IOSTANDARD). This condition may seriously affect the device and will be an
    error in bitstream creation. It should be corrected by properly specifying
    the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<4> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<8> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB write_sel<4> is either not constrained
+WARNING:PhysDesignRules:2452 - The IOB read_sel1<0> is either not constrained
    (LOC) to a specific location and/or has an undefined I/O Standard
    (IOSTANDARD). This condition may seriously affect the device and will be an
    error in bitstream creation. It should be corrected by properly specifying
    the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<5> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<9> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<6> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data2<7> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
@@ -413,11 +410,116 @@ WARNING:PhysDesignRules:2452 - The IOB data2<8> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<5> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<6> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data2<9> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<0> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB clk is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<3> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<4> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<1> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data2<2> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<31> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<30> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<31> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<30> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<15> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<16> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<17> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<18> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<19> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<11> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<12> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<13> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<14> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data1<10> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
@@ -428,22 +530,7 @@ WARNING:PhysDesignRules:2452 - The IOB data1<11> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<0> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data1<12> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<20> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<1> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
@@ -453,122 +540,22 @@ WARNING:PhysDesignRules:2452 - The IOB data1<13> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<21> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<2> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<10> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data1<14> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<22> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<30> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<3> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<10> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<15> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<23> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<31> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<4> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<11> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<16> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<24> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<5> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<12> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<20> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<17> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<19> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data1<25> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<6> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<13> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<21> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<10> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<18> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
@@ -578,77 +565,7 @@ WARNING:PhysDesignRules:2452 - The IOB data1<26> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<7> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<14> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<22> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<30> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<0> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<11> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data1<19> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data1<27> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<8> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<15> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<23> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<31> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<1> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<12> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<20> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
@@ -658,143 +575,110 @@ WARNING:PhysDesignRules:2452 - The IOB data1<28> is either not constrained (LOC)
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<9> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<16> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<24> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<2> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<13> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<21> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<15> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB data1<29> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<17> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB write_data<16> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<17> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<18> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<21> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<22> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<23> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<24> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<20> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<25> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data1<21> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<3> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<14> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data1<22> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<22> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB data1<23> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<30> is either not constrained (LOC)
+WARNING:PhysDesignRules:2452 - The IOB write_data<20> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB data1<24> is either not constrained (LOC)
    to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
    This condition may seriously affect the device and will be an error in
    bitstream creation. It should be corrected by properly specifying the pin
    location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<18> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<26> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<4> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<15> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<23> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<31> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<19> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<27> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp<5> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<16> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB data2<24> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB tmp2<28> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<29> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<25> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<26> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<27> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB write_data<28> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network read_sel1<4> has no load.
-INFO:LIT:395 - The above info message is repeated 42 more times for the
-   following (max. 5 shown):
-   read_sel1<3>,
-   read_sel1<2>,
-   read_sel1<1>,
-   read_sel1<0>,
-   read_sel2<4>
-   To see the details of these info messages, please use the -detail switch.
+INFO:LIT:243 - Logical network write_ena has no load.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
@@ -824,6 +708,7 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
 | data1<0>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | data1<1>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | data1<2>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
@@ -888,72 +773,48 @@ Section 6 - IOB Properties
 | data2<29>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | data2<30>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | data2<31>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp3                               | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<0>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<1>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<2>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<3>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<4>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<5>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<6>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<7>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<8>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<9>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<10>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<11>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<12>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<13>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<14>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<15>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<16>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<17>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<18>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<19>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<20>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<21>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<22>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<23>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<24>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<25>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<26>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<27>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<28>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<29>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<30>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp2<31>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<0>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<1>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<2>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<3>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<4>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<5>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<6>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<7>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<8>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<9>                             | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<10>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<11>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<12>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<13>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<14>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<15>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<16>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<17>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<18>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<19>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<20>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<21>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<22>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<23>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<24>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<25>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<26>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<27>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<28>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<29>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<30>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| tmp<31>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| write_ena                          | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel1<0>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel1<1>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel1<2>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel1<3>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel1<4>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel2<0>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel2<1>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel2<2>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel2<3>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| read_sel2<4>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<0>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<1>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<2>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<3>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<4>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<5>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<6>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<7>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<8>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<9>                      | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<10>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<11>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<12>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<13>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<14>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<15>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<16>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<17>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<18>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<19>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<20>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<21>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<22>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<23>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<24>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<25>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<26>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<27>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<28>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<29>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<30>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| write_data<31>                     | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
 | write_sel<0>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
 | write_sel<1>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
 | write_sel<2>                       | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |

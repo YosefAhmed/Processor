@@ -105,6 +105,20 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\ComponentsPackage.vhd" into library work
+Parsing package <ComponentsPackage>.
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\muxRegFile32x1.vhd" into library work
+Parsing entity <muxRegFile32x1>.
+Parsing architecture <Behavioral> of entity <muxregfile32x1>.
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\GenericReg.vhd" into library work
+Parsing entity <reg>.
+Parsing architecture <Behavioral> of entity <reg>.
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" into library work
+Parsing entity <Decoder32>.
+Parsing architecture <Behavioral> of entity <decoder32>.
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd" into library work
+Parsing entity <Reg_File>.
+Parsing architecture <Behavioral> of entity <reg_file>.
 Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\RegisterFileTest.vhd" into library work
 Parsing entity <RegisterFileTest>.
 Parsing architecture <behavior> of entity <registerfiletest>.
@@ -114,14 +128,23 @@ Parsing architecture <behavior> of entity <registerfiletest>.
 =========================================================================
 
 Elaborating entity <RegisterFileTest> (architecture <behavior>) from library <work>.
-WARNING:HDLCompiler:89 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\RegisterFileTest.vhd" Line 12: <registerfile> remains a black-box since it has no binding entity.
-ERROR:HDLCompiler:890 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\RegisterFileTest.vhd" Line 59: wait statement without UNTIL clause not supported for synthesis
+
+Elaborating entity <Reg_File> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <reg> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <muxRegFile32x1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Decoder32> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 25: i should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 28: i should be on the sensitivity list of the process
+ERROR:HDLCompiler:890 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\RegisterFileTest.vhd" Line 70: wait statement without UNTIL clause not supported for synthesis
 Netlist RegisterFileTest(behavior) remains a blackbox, due to errors in its contents
 --> 
 
-Total memory usage is 217284 kilobytes
+Total memory usage is 218756 kilobytes
 
 Number of errors   :    1 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

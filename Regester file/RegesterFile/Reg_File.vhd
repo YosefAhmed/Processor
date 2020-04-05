@@ -11,12 +11,12 @@
 				   write_sel : in  STD_LOGIC_VECTOR(4 DOWNTO 0):= (others => 'Z');
 				   write_data : in  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				   write_ena : in  STD_LOGIC;
-				   tmp3 : out  STD_LOGIC;
 				   data1 : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				   data2 : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
-				   tmp : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
-				   tmp2 : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				  clk : in STD_LOGIC
+--				   tmp3 : out  STD_LOGIC;
+--				   tmp : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
+--				   tmp2 : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
 			  );
 	end Reg_File;
 
@@ -96,18 +96,18 @@
 	Mux1: muxRegFile32x1 port map(sig0,sig1,sig2,sig3,sig4,sig5,sig6,sig7,sig8,sig9,sig10,sig11,sig12,sig13,sig14,sig15,sig16,sig17,sig18,sig19,sig20,sig21,sig22,sig23,sig24,sig25,sig26,sig27,sig28,sig29,sig30,sig31,read_sel1 , data1);
 	Mux2: muxRegFile32x1 port map(sig0,sig1,sig2,sig3,sig4,sig5,sig6,sig7,sig8,sig9,sig10,sig11,sig12,sig13,sig14,sig15,sig16,sig17,sig18,sig19,sig20,sig21,sig22,sig23,sig24,sig25,sig26,sig27,sig28,sig29,sig30,sig31, read_sel2, data2);
 	---- END READING ----
---	report "regEnable= " & std_logic_vector'image(regEnable);
-	dec: Decoder32 Port Map (write_sel,regNum,clk);
 	
-	process(clk) 
-	begin
-		for var in 0 to 31 loop					
-			regEnable(var) <= regNum(var) AND write_ena;
-		end loop;
-	end process;
-			tmp <= regEnable;
-			tmp2 <= regNum;
-			tmp3 <= regEnable(0);
-
+	---- START WRITING ----
+	dec: Decoder32 Port Map (write_sel,regNum,clk);
+	regEnable <= regNum;
+	---- END WRITING ----
+	
+	---- FOR TESTING ----
+--*****ANY tmp IN THA CODE IS FOR TESTING*******
+--			tmp <= regEnable;
+--			tmp2 <= regNum;
+--			tmp3 <= regEnable(0);
+	---- FOR TESTING ----
+	
 	end Behavioral;
 

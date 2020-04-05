@@ -1,4 +1,4 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe" -prj "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_beh.prj" "work.testWrite" 
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest_isim_beh.exe -prj F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest_beh.prj work.RegisterFileTest 
 ISim P.58f (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -8,24 +8,25 @@ Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/mux
 Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/GenericReg.vhd" into library work
 Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Decoder32.vhd" into library work
 Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.vhd" into library work
-Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite.vhd" into library work
+Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 160724 KB
-Fuse CPU Usage: 264 ms
+Fuse Memory Usage: 161596 KB
+Fuse CPU Usage: 343 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
+Compiling package numeric_std
 Compiling package componentspackage
 Compiling architecture behavioral of entity reg [\reg(32)\]
 Compiling architecture behavioral of entity muxRegFile32x1 [muxregfile32x1_default]
 Compiling architecture behavioral of entity Decoder32 [decoder32_default]
 Compiling architecture behavioral of entity Reg_File [reg_file_default]
-Compiling architecture behavior of entity testwrite
+Compiling architecture behavior of entity registerfiletest
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
-Compiled 14 VHDL Units
-Built simulation executable F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe
-Fuse Memory Usage: 178644 KB
-Fuse CPU Usage: 452 ms
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 15 VHDL Units
+Built simulation executable F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest_isim_beh.exe
+Fuse Memory Usage: 183520 KB
+Fuse CPU Usage: 671 ms

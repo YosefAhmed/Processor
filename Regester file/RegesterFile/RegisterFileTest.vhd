@@ -9,16 +9,22 @@ END RegisterFileTest;
  
 ARCHITECTURE behavior OF RegisterFileTest IS 
  
-    COMPONENT RegisterFile
+    -- Component Declaration for the Unit Under Test (UUT)
+ 
+    COMPONENT Reg_File
     PORT(
          read_sel1 : IN  std_logic_vector(4 downto 0);
          read_sel2 : IN  std_logic_vector(4 downto 0);
-         write_sel : IN  std_logic_vector(4 downto 0);
-         write_ena : IN  std_logic;
-         clk : IN  std_logic;
+         write_sel : IN  std_logic_vector(4 downto 0):= (others => 'Z');
          write_data : IN  std_logic_vector(31 downto 0);
+         write_ena : IN  std_logic;
+--         tmp3 : OUT  std_logic;
          data1 : OUT  std_logic_vector(31 downto 0);
-         data2 : OUT  std_logic_vector(31 downto 0)
+         data2 : OUT  std_logic_vector(31 downto 0);
+--		   tmp : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
+--		   tmp2 : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+         clk : IN  std_logic
         );
     END COMPONENT;
     
@@ -26,30 +32,35 @@ ARCHITECTURE behavior OF RegisterFileTest IS
    --Inputs
    signal read_sel1 : std_logic_vector(4 downto 0) := (others => '0');
    signal read_sel2 : std_logic_vector(4 downto 0) := (others => '0');
-   signal write_sel : std_logic_vector(4 downto 0) := (others => '0');
+   signal write_sel : std_logic_vector(4 downto 0) := (others => 'Z');
+   signal write_data : std_logic_vector(31 downto 0) := (others => '0');
    signal write_ena : std_logic := '0';
    signal clk : std_logic := '0';
-   signal write_data : std_logic_vector(31 downto 0) := (others => '0');
 
  	--Outputs
    signal data1 : std_logic_vector(31 downto 0);
    signal data2 : std_logic_vector(31 downto 0);
-
+--   signal tmp : std_logic_vector(31 downto 0);
+--   signal tmp2 : std_logic_vector(31 downto 0);
+--	  signal tmp3 : std_logic := '0';
    -- Clock period definitions
-   constant clk_period : time := 10ps;
+   constant clk_period : time := 10 ns;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: RegisterFile PORT MAP (
+   uut: Reg_File PORT MAP (
           read_sel1 => read_sel1,
           read_sel2 => read_sel2,
           write_sel => write_sel,
-          write_ena => write_ena,
-          clk => clk,
           write_data => write_data,
+          write_ena => write_ena,
           data1 => data1,
-          data2 => data2
+          data2 => data2,
+--          tmp3 => tmp3,
+--          tmp => tmp,
+--          tmp2 => tmp2,
+          clk => clk
         );
 
    -- Clock process definitions
@@ -61,6 +72,7 @@ BEGIN
 		wait for clk_period/2;
    end process;
  
+
 
    -- Stimulus process
    stim_proc: process

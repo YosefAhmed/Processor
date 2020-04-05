@@ -2,14 +2,14 @@ Command line:
    testWrite_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49706
+     -socket  49756
 
-Mon Apr 06 00:11:04 2020
+Mon Apr 06 00:31:08 2020
 
 
- Elaboration Time: 0.0625 sec
+ Elaboration Time: 0.046875 sec
 
- Current Memory Usage: 841.073 Meg
+ Current Memory Usage: 841.597 Meg
 
  Total Signals          : 415
  Total Nets             : 2354
@@ -20,9 +20,9 @@ Mon Apr 06 00:11:04 2020
  Total Traceable Variables  : 43
  Total Scalar Nets and Variables : 2765
 
- Total Simulation Time: 0.109375 sec
+ Total Simulation Time: 0.5625 sec
 
- Current Memory Usage: 841.073 Meg
+ Current Memory Usage: 1156.69 Meg
 
-Mon Apr 06 00:11:17 2020
+Mon Apr 06 00:32:03 2020
 

@@ -1,5 +1,5 @@
 ISim log file
-Running: F:\programming\VHDL\Milestone1\Regester file\RegesterFile\testWrite_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.wdb 
+Running: F:\programming\VHDL\Milestone1\Regester file\RegesterFile\RegisterFileTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest_isim_beh.wdb 
 ISim P.58f (signature 0x8ef4fb42)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -8,37 +8,8 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 49997 ps: Note: Test1 (/testwrite/).
-at 49997 ps: Error: 1:Fail
-at 49997 ps: Note: Test2 (/testwrite/).
-at 49997 ps: Error: 2:Fail
-ISim P.58f (signature 0x8ef4fb42)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 49997 ps: Note: Test1 (/testwrite/).
-at 49997 ps: Error: 1:Fail
-at 49997 ps: Note: Test2 (/testwrite/).
-at 49997 ps: Error: 2:Fail
-ISim P.58f (signature 0x8ef4fb42)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /testwrite/uut/dec/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 0 ps, Instance /testwrite/uut/dec/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-Finished circuit initialization process.
-at 5 ns(1), Instance /testwrite/uut/dec/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 49997 ps: Note: Test1 (/testwrite/).
-at 49997 ps: Error: 1:Fail
-at 49997 ps: Note: Test2 (/testwrite/).
-at 49997 ps: Error: 2:Fail
-ISim P.58f (signature 0x8ef4fb42)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 49997 ps: Note: Test1 (/testwrite/).
-at 49997 ps: Error: 1:Fail
-at 49997 ps: Note: Test2 (/testwrite/).
-at 49997 ps: Error: 2:Fail
+at 49997 ps: Note: Test1 (/registerfiletest/).
+at 49997 ps: Note: Test2 (/registerfiletest/).
+at 79997 ps: Note: Test3 (/registerfiletest/).
+at 79997 ps: Note: Test4 (/registerfiletest/).
+at 79997 ps: Note: Test Complete (/registerfiletest/).
