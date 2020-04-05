@@ -35,15 +35,15 @@
 	B : in STD_LOGIC;
 	cin : in STD_LOGIC;
 	cout: out STD_LOGIC;
-	sum : out STD_LOGI
+	sum : out STD_LOGIC
 	);
 	end Entity;
 
 	architecture Behavioral of adder is
 	Signal tmp : STD_LOGIC_Vector (1 downto 0);
 	begin
-	tmp <= ('0'& A)+ ('0' & B)+ cin;
-	sum <= tmp(0);
-	cout <= tmp(1);
+	sum <= ( A xor B)xor cin;
+	cout <= (A And B) or ((A xor B) And cin);
+	
 	end Behavioral;
 

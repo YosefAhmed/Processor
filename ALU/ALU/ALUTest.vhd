@@ -130,7 +130,7 @@ BEGIN
 			aluop <= "0110" ;
 			wait for 10ns;
 			report "Test7";
-			assert(dataout = "11111111111111111111111111110111" and oflag = '1' and cflag = '1' and zflag = '0') report "7:Fail" severity error;
+			assert(dataout = "11111111111111111111111111110111" and oflag = '0' and cflag = '1' and zflag = '0') report "7:Fail" severity error;
 
 			wait for 1ns;
 			

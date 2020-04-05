@@ -1,0 +1,3 @@
+vhdl work "ComponentsPackage.vhd"
+vhdl work "ALU.vhd"
+vhdl work "ALUTest.vhd"
