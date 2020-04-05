@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-04-04T20:39:55</DateModified>
+  <DateModified>2020-04-04T23:29:44</DateModified>
   <ModuleName>ALU</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>F:/programming/VHDL/Milestone1/ALU/ALU/iseconfig/ALU.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/programming/VHDL/Milestone1/ALU/ALU</ImplementationReportsDirectory>
+  <SavedFilePath>E:/College/Projects/Archi - Processor/Processor/ALU/ALU/iseconfig/ALU.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/College/Projects/Archi - Processor/Processor/ALU/ALU\</ImplementationReportsDirectory>
   <DateInitialized>2020-04-04T20:39:55</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

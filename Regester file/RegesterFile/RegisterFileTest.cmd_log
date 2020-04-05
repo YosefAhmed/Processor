@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.syr" 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.syr" 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.syr" 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/RegisterFileTest.syr" 

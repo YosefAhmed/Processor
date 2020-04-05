@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Reg_File.prj
 
@@ -107,6 +107,12 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\ComponentsPackage.vhd" into library work
 Parsing package <ComponentsPackage>.
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\muxRegFile32x1.vhd" into library work
+Parsing entity <muxRegFile32x1>.
+Parsing architecture <Behavioral> of entity <muxregfile32x1>.
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\GenericReg.vhd" into library work
+Parsing entity <reg>.
+Parsing architecture <Behavioral> of entity <reg>.
 Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" into library work
 Parsing entity <Decoder32>.
 Parsing architecture <Behavioral> of entity <decoder32>.
@@ -120,9 +126,12 @@ Parsing architecture <Behavioral> of entity <reg_file>.
 
 Elaborating entity <Reg_File> (architecture <Behavioral>) from library <work>.
 
+Elaborating entity <reg> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <muxRegFile32x1> (architecture <Behavioral>) from library <work>.
+
 Elaborating entity <Decoder32> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 26: i should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 27: e should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 25: i should be on the sensitivity list of the process
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -130,32 +139,114 @@ WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterF
 
 Synthesizing Unit <Reg_File>.
     Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd".
-WARNING:Xst:647 - Input <readSel1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <readSel2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <writeData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <write_ena> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <Reg_File> synthesized.
+
+Synthesizing Unit <reg>.
+    Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\GenericReg.vhd".
+        n = 32
+    Found 32-bit register for signal <temp>.
+    Found 32-bit adder for signal <temp[31]_GND_7_o_add_0_OUT> created at line 25.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <reg> synthesized.
+
+Synthesizing Unit <muxRegFile32x1>.
+    Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\muxRegFile32x1.vhd".
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[31]_MUX_64_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[30]_MUX_96_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[29]_MUX_128_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[28]_MUX_160_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[27]_MUX_192_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[26]_MUX_224_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[25]_MUX_256_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[24]_MUX_288_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[23]_MUX_320_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[22]_MUX_352_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[21]_MUX_384_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[20]_MUX_416_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[19]_MUX_448_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[18]_MUX_480_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[17]_MUX_512_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[16]_MUX_544_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[15]_MUX_576_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[14]_MUX_608_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[13]_MUX_640_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[12]_MUX_672_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[11]_MUX_704_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[10]_MUX_736_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[9]_MUX_768_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[8]_MUX_800_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[7]_MUX_832_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[6]_MUX_864_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[5]_MUX_896_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[4]_MUX_928_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[3]_MUX_960_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[2]_MUX_992_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[1]_MUX_1024_o> created at line 46.
+    Found 1-bit 32-to-1 multiplexer for signal <Z_8_o_I0[0]_MUX_1056_o> created at line 46.
+    Found 1-bit tristate buffer for signal <O<31>> created at line 46
+    Found 1-bit tristate buffer for signal <O<30>> created at line 46
+    Found 1-bit tristate buffer for signal <O<29>> created at line 46
+    Found 1-bit tristate buffer for signal <O<28>> created at line 46
+    Found 1-bit tristate buffer for signal <O<27>> created at line 46
+    Found 1-bit tristate buffer for signal <O<26>> created at line 46
+    Found 1-bit tristate buffer for signal <O<25>> created at line 46
+    Found 1-bit tristate buffer for signal <O<24>> created at line 46
+    Found 1-bit tristate buffer for signal <O<23>> created at line 46
+    Found 1-bit tristate buffer for signal <O<22>> created at line 46
+    Found 1-bit tristate buffer for signal <O<21>> created at line 46
+    Found 1-bit tristate buffer for signal <O<20>> created at line 46
+    Found 1-bit tristate buffer for signal <O<19>> created at line 46
+    Found 1-bit tristate buffer for signal <O<18>> created at line 46
+    Found 1-bit tristate buffer for signal <O<17>> created at line 46
+    Found 1-bit tristate buffer for signal <O<16>> created at line 46
+    Found 1-bit tristate buffer for signal <O<15>> created at line 46
+    Found 1-bit tristate buffer for signal <O<14>> created at line 46
+    Found 1-bit tristate buffer for signal <O<13>> created at line 46
+    Found 1-bit tristate buffer for signal <O<12>> created at line 46
+    Found 1-bit tristate buffer for signal <O<11>> created at line 46
+    Found 1-bit tristate buffer for signal <O<10>> created at line 46
+    Found 1-bit tristate buffer for signal <O<9>> created at line 46
+    Found 1-bit tristate buffer for signal <O<8>> created at line 46
+    Found 1-bit tristate buffer for signal <O<7>> created at line 46
+    Found 1-bit tristate buffer for signal <O<6>> created at line 46
+    Found 1-bit tristate buffer for signal <O<5>> created at line 46
+    Found 1-bit tristate buffer for signal <O<4>> created at line 46
+    Found 1-bit tristate buffer for signal <O<3>> created at line 46
+    Found 1-bit tristate buffer for signal <O<2>> created at line 46
+    Found 1-bit tristate buffer for signal <O<1>> created at line 46
+    Found 1-bit tristate buffer for signal <O<0>> created at line 46
+    Summary:
+	inferred  32 Multiplexer(s).
+	inferred  32 Tristate(s).
+Unit <muxRegFile32x1> synthesized.
 
 Synthesizing Unit <Decoder32>.
     Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd".
 WARNING:Xst:647 - Input <I<4:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:737 - Found 1-bit latch for signal <O<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <O<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   5 Latch(s).
+	no macro.
 Unit <Decoder32> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Latches                                              : 5
- 1-bit latch                                           : 5
+# Adders/Subtractors                                   : 32
+ 32-bit adder                                          : 32
+# Registers                                            : 32
+ 32-bit register                                       : 32
+# Multiplexers                                         : 96
+ 1-bit 32-to-1 multiplexer                             : 64
+ 32-bit 2-to-1 multiplexer                             : 32
+# Tristates                                            : 64
+ 1-bit tristate buffer                                 : 64
 
 =========================================================================
 
@@ -163,31 +254,76 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <dec> is unconnected in block <Reg_File>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <reg>.
+The following registers are absorbed into counter <temp>: 1 register on signal <temp>.
+Unit <reg> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Counters                                             : 32
+ 32-bit up counter                                     : 32
+# Multiplexers                                         : 64
+ 1-bit 32-to-1 multiplexer                             : 64
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2146 - In block <Reg_File>, Counter <reg31/temp> <reg32/temp> <reg28/temp> <reg30/temp> <reg29/temp> <reg25/temp> <reg27/temp> <reg26/temp> <reg22/temp> <reg24/temp> <reg23/temp> <reg19/temp> <reg21/temp> <reg20/temp> <reg16/temp> <reg18/temp> <reg17/temp> <reg13/temp> <reg15/temp> <reg14/temp> <reg10/temp> <reg12/temp> <reg11/temp> <reg7/temp> <reg9/temp> <reg8/temp> <reg4/temp> <reg6/temp> <reg5/temp> <reg1/temp> <reg3/temp> <reg2/temp> are equivalent, XST will keep only <reg31/temp>.
 
 Optimizing unit <Reg_File> ...
-
-Optimizing unit <Decoder32> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Reg_File, actual ratio is 0.
+FlipFlop reg31/temp_31 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_30 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_29 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_28 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_27 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_26 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_25 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_23 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop reg31/temp_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+
 =========================================================================
 
 =========================================================================
@@ -209,16 +345,17 @@ Top Level Output File Name         : Reg_File.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6
+# BELS                             : 34
 #      GND                         : 1
-#      LUT3                        : 5
-# FlipFlops/Latches                : 5
-#      LD                          : 5
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 64
+#      FDRE                        : 64
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 35
-#      IBUF                        : 3
-#      OBUF                        : 32
+# IO Buffers                       : 96
+#      IBUF                        : 32
+#      OBUF                        : 64
 
 Device utilization summary:
 ---------------------------
@@ -227,20 +364,18 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    5  out of  63400     0%  
-    Number used as Logic:                 5  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      5
-   Number with an unused Flip Flop:       5  out of      5   100%  
-   Number with an unused LUT:             0  out of      5     0%  
-   Number of fully used LUT-FF pairs:     0  out of      5     0%  
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
    Number of unique control sets:         1
 
 IO Utilization: 
  Number of IOs:                         113
- Number of bonded IOBs:                  36  out of    210    17%  
-    IOB Flip Flops/Latches:               5
+ Number of bonded IOBs:                  97  out of    210    46%  
+    IOB Flip Flops/Latches:              64
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of    128     0%  
@@ -266,7 +401,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-writeEnable                        | BUFGP                  | 5     |
+clk                                | BUFGP                  | 64    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -278,8 +413,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 0.628ns
-   Maximum output required time after clock: 0.751ns
+   Minimum input arrival time before clock: 0.182ns
+   Maximum output required time after clock: 0.640ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -287,43 +422,43 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'writeEnable'
-  Total number of paths / destination ports: 15 / 5
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 64 / 64
 -------------------------------------------------------------------------
-Offset:              0.628ns (Levels of Logic = 2)
-  Source:            writeSel<2> (PAD)
-  Destination:       dec/O_0 (LATCH)
-  Destination Clock: writeEnable falling
+Offset:              0.182ns (Levels of Logic = 2)
+  Source:            write_data<0> (PAD)
+  Destination:       reg31/temp_0 (FF)
+  Destination Clock: clk rising
 
-  Data Path: writeSel<2> to dec/O_0
+  Data Path: write_data<0> to reg31/temp_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   0.001   0.530  writeSel_2_IBUF (writeSel_2_IBUF)
-     LUT3:I0->O            1   0.097   0.000  dec/I[2]_Decoder_0_OUT<0><2>1 (dec/I[2]_Decoder_0_OUT<0>)
-     LD:D                     -0.028          dec/O_0
+     IBUF:I->O             0   0.001   0.000  write_data_0_IBUF (reg31/Mcount_temp_lut<0>)
+     XORCY:LI->O           2   0.173   0.000  reg31/Mcount_temp_xor<0> (reg31/Mcount_temp)
+     FDRE:D                    0.008          reg31/temp_0
     ----------------------------------------
-    Total                      0.628ns (0.098ns logic, 0.530ns route)
-                                       (15.6% logic, 84.4% route)
+    Total                      0.182ns (0.182ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'writeEnable'
-  Total number of paths / destination ports: 5 / 5
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 64 / 64
 -------------------------------------------------------------------------
-Offset:              0.751ns (Levels of Logic = 1)
-  Source:            dec/O_4 (LATCH)
-  Destination:       dataOut1<4> (PAD)
-  Source Clock:      writeEnable falling
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            reg31/temp_31_1 (FF)
+  Destination:       data1<31> (PAD)
+  Source Clock:      clk rising
 
-  Data Path: dec/O_4 to dataOut1<4>
+  Data Path: reg31/temp_31_1 to data1<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               1   0.472   0.279  dec/O_4 (dec/O_4)
-     OBUF:I->O                 0.000          dataOut1_4_OBUF (dataOut1<4>)
+     FDRE:C->Q             1   0.361   0.279  reg31/temp_31_1 (reg31/temp_31_1)
+     OBUF:I->O                 0.000          data1_31_OBUF (data1<31>)
     ----------------------------------------
-    Total                      0.751ns (0.472ns logic, 0.279ns route)
-                                       (62.8% logic, 37.2% route)
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 
@@ -333,14 +468,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.58 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.39 secs
  
 --> 
 
-Total memory usage is 294444 kilobytes
+Total memory usage is 352364 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

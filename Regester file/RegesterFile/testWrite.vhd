@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   02:06:56 04/05/2020
+-- Create Date:   20:13:09 04/05/2020
 -- Design Name:   
 -- Module Name:   F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite.vhd
 -- Project Name:  RegesterFile
@@ -41,29 +41,29 @@ ARCHITECTURE behavior OF testWrite IS
  
     COMPONENT Reg_File
     PORT(
-         readSel1 : IN  std_logic_vector(4 downto 0);
-         readSel2 : IN  std_logic_vector(4 downto 0);
-         writeSel : IN  std_logic_vector(4 downto 0);
-         writeData : IN  std_logic_vector(31 downto 0);
-         writeEnable : IN  std_logic;
-         dataOut1 : OUT  std_logic_vector(31 downto 0);
-         dataOut2 : OUT  std_logic_vector(31 downto 0);
+         read_sel1 : IN  std_logic_vector(4 downto 0);
+         read_sel2 : IN  std_logic_vector(4 downto 0);
+         write_sel : IN  std_logic_vector(4 downto 0);
+         write_data : IN  std_logic_vector(31 downto 0);
+         write_ena : IN  std_logic;
+         data1 : OUT  std_logic_vector(31 downto 0);
+         data2 : OUT  std_logic_vector(31 downto 0);
          clk : IN  std_logic
         );
     END COMPONENT;
     
 
    --Inputs
-   signal readSel1 : std_logic_vector(4 downto 0) := (others => '0');
-   signal readSel2 : std_logic_vector(4 downto 0) := (others => '0');
-   signal writeSel : std_logic_vector(4 downto 0) := (others => '0');
-   signal writeData : std_logic_vector(31 downto 0) := (others => '0');
-   signal writeEnable : std_logic := '0';
+   signal read_sel1 : std_logic_vector(4 downto 0) := (others => '0');
+   signal read_sel2 : std_logic_vector(4 downto 0) := (others => '0');
+   signal write_sel : std_logic_vector(4 downto 0) := (others => '0');
+   signal write_data : std_logic_vector(31 downto 0) := (others => '0');
+   signal write_ena : std_logic := '0';
    signal clk : std_logic := '0';
 
  	--Outputs
-   signal dataOut1 : std_logic_vector(31 downto 0);
-   signal dataOut2 : std_logic_vector(31 downto 0);
+   signal data1 : std_logic_vector(31 downto 0);
+   signal data2 : std_logic_vector(31 downto 0);
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -72,13 +72,13 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: Reg_File PORT MAP (
-          readSel1 => readSel1,
-          readSel2 => readSel2,
-          writeSel => writeSel,
-          writeData => writeData,
-          writeEnable => writeEnable,
-          dataOut1 => dataOut1,
-          dataOut2 => dataOut2,
+          read_sel1 => read_sel1,
+          read_sel2 => read_sel2,
+          write_sel => write_sel,
+          write_data => write_data,
+          write_ena => write_ena,
+          data1 => data1,
+          data2 => data2,
           clk => clk
         );
 
@@ -97,11 +97,29 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;	
-		
-		writeSel <= "00001";
-		writeEnable<= '1';
-				
-      wait for clk_period*10;
+--Write value in $t0
+			write_sel <= "01000" ; --$t0
+			write_data <= "00001111000011110000111100001111" ;
+			write_ena <= '1' ;
+			wait for clk_period * 1;
+
+		--Write value in $s0
+			write_sel <= "10000" ; --$s0
+			write_data <= "11110000111100001111000011110000" ;
+			write_ena <= '1' ;
+			wait for clk_period * 1;
+
+		--Read data from $t0 and $s0
+			read_sel1 <= "01000" ; --$t0
+			read_sel2 <= "10000" ; --$s0
+			write_ena <= '0' ;
+			wait for clk_period * 2;
+			
+			report "Test1";
+			assert(data1 = "00001111000011110000111100001111") report "1:Fail" severity error;
+			report "Test2";
+			assert(data2 = "11110000111100001111000011110000") report "2:Fail" severity error;
+      wait for clk_period*1;
 
       -- insert stimulus here 
 

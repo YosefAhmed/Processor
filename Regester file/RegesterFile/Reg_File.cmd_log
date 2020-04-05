@@ -5,6 +5,7 @@ xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFil
 xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
 xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
 xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
+<<<<<<< HEAD
 xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "Reg_File.ngc" Reg_File.ngd  
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
@@ -66,6 +67,42 @@ map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
+=======
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "Reg_File.ngc" Reg_File.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
+par -w -intstyle ise -ol high -mt off Reg_File_map.ncd Reg_File.ncd Reg_File.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Reg_File.twx Reg_File.ncd -o Reg_File.twr Reg_File.pcf 
+<<<<<<< HEAD
+=======
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.xst" -ofn "E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.syr" 
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "Reg_File.ngc" Reg_File.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
+par -w -intstyle ise -ol high -mt off Reg_File_map.ncd Reg_File.ncd Reg_File.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Reg_File.twx Reg_File.ncd -o Reg_File.twr Reg_File.pcf 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
+xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "Reg_File.ngc" Reg_File.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 
+par -w -intstyle ise -ol high -mt off Reg_File_map.ncd Reg_File.ncd Reg_File.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Reg_File.twx Reg_File.ncd -o Reg_File.twr Reg_File.pcf 
 xst -intstyle ise -ifn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.xst" -ofn "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "Reg_File.ngc" Reg_File.ngd  
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Reg_File_map.ncd Reg_File.ngd Reg_File.pcf 

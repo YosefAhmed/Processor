@@ -7,6 +7,7 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+<<<<<<< HEAD
          <ClosedNode>/RegisterFileTest - behavior F:|programming|VHDL|Milestone1|Regester file|RegesterFile|RegisterFileTest.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -17,13 +18,26 @@
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000f0000000020000000000000000000000000200000064ffffffff000000810000000300000002000000f00000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>Reg_File - Behavioral (F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.vhd)</CurrentItem>
+=======
+         <ClosedNode>/RegisterFileTest - behavior E:|College|Projects|Archi - Processor|Processor|Regester file|RegesterFile|RegisterFileTest.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Reg_File - Behavioral (E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000191000000020000000000000000000000000200000064ffffffff000000810000000300000002000001910000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Reg_File - Behavioral (E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/Reg_File.vhd)</CurrentItem>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
+<<<<<<< HEAD
          <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
@@ -31,19 +45,36 @@
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000117000000010000000100000000000000000000000064ffffffff000000810000000000000001000001170000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
+=======
+         <SelectedItem>Update All Schematic Files</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Update All Schematic Files</CurrentItem>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
+<<<<<<< HEAD
          <SelectedItem>Decoder32.vhd</SelectedItem>
+=======
+         <SelectedItem>ComponentsPackage.vhd</SelectedItem>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028e000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001c20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+<<<<<<< HEAD
       <CurrentItem>Decoder32.vhd</CurrentItem>
+=======
+      <CurrentItem>ComponentsPackage.vhd</CurrentItem>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -59,11 +90,16 @@
       <CurrentItem>ComponentsPackage.vhd</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+<<<<<<< HEAD
    <CurrentView>Implementation</CurrentView>
+=======
+   <CurrentView>Behavioral Simulation</CurrentView>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
+<<<<<<< HEAD
          <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
@@ -76,10 +112,25 @@
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000106000000010000000100000000000000000000000064ffffffff000000810000000000000001000001060000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
+=======
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Synthesize - XST</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Synthesize - XST</CurrentItem>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+<<<<<<< HEAD
          <ClosedNode>/RegisterFileTest - behavior F:|programming|VHDL|Milestone1|Regester file|RegesterFile|RegisterFileTest.vhd</ClosedNode>
          <ClosedNode>/test1 - behavior F:|programming|VHDL|Milestone1|Regester file|RegesterFile|test1.vhd/uut - Reg_File - Behavioral</ClosedNode>
       </ClosedNodes>
@@ -91,10 +142,25 @@
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000104000000020000000000000000000000000200000064ffffffff000000810000000300000002000001040000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>testWrite - behavior (F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite.vhd)</CurrentItem>
+=======
+         <ClosedNode>/Reg_File - Behavioral E:|College|Projects|Archi - Processor|Processor|Regester file|RegesterFile|Reg_File.vhd</ClosedNode>
+         <ClosedNode>/RegisterFileTest - behavior E:|College|Projects|Archi - Processor|Processor|Regester file|RegesterFile|RegisterFileTest.vhd</ClosedNode>
+         <ClosedNode>/testRead - behavior E:|College|Projects|Archi - Processor|Processor|Regester file|RegesterFile|testRead.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>RegisterFileTest - behavior (E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000013f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000013f0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>RegisterFileTest - behavior (E:/College/Projects/Archi - Processor/Processor/Regester file/RegesterFile/RegisterFileTest.vhd)</CurrentItem>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
+<<<<<<< HEAD
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -105,6 +171,18 @@
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000117000000010000000100000000000000000000000064ffffffff000000810000000000000001000001170000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
+=======
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Update All Schematic Files</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Update All Schematic Files</CurrentItem>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -115,7 +193,11 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+<<<<<<< HEAD
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000117000000010000000100000000000000000000000064ffffffff000000810000000000000001000001170000000100000000</ViewHeaderState>
+=======
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
+>>>>>>> 748b920a15d0a8e3d20ab296f8f347cd1e3e6005
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>

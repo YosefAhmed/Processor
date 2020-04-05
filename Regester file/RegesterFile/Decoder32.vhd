@@ -10,7 +10,6 @@
 	entity Decoder32 is
 		 Port ( I : in  STD_LOGIC_VECTOR (4 downto 0);
 				  O : out  STD_LOGIC_VECTOR (31 downto 0);
-				  E : in  STD_LOGIC;
  	           clk : IN  std_logic
 				 );
 	end Decoder32;
@@ -24,11 +23,8 @@
 	variable tmp: integer range 0 to 4;
 	begin
 	tmp := CONV_INTEGER(I);
-	if(E = '1')then
 			O <=  (others => '0');
 			O(tmp) <=  '1';
-			report "tmp = " &integer'image(tmp);
-	end if;
 	end process;
 
 	end Behavioral;
