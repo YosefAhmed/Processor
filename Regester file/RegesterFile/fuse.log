@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe -prj F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_beh.prj work.testWrite 
+ISim P.58f (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/ComponentsPackage.vhd" into library work
+Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Decoder32.vhd" into library work
+Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/Reg_File.vhd" into library work
+Parsing VHDL file "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 161404 KB
+Fuse CPU Usage: 249 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package componentspackage
+Compiling package numeric_std
+Compiling architecture behavioral of entity Decoder32 [decoder32_default]
+Compiling architecture behavioral of entity Reg_File [reg_file_default]
+Compiling architecture behavior of entity testwrite
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
+Built simulation executable F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe
+Fuse Memory Usage: 184352 KB
+Fuse CPU Usage: 531 ms

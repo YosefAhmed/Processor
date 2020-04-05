@@ -1,2 +1,3 @@
 vhdl work "ComponentsPackage.vhd"
+vhdl work "Decoder32.vhd"
 vhdl work "Reg_File.vhd"

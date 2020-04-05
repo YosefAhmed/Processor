@@ -1,0 +1,3 @@
+work	"ComponentsPackage.vhd"
+work	"Decoder32.vhd"
+work	"Reg_File.vhd"

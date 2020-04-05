@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_isim_beh.exe" -prj "F:/programming/VHDL/Milestone1/Regester file/RegesterFile/testWrite_beh.prj" "work.testWrite" 

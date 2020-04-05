@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Reg_File.prj
 
@@ -107,6 +107,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\ComponentsPackage.vhd" into library work
 Parsing package <ComponentsPackage>.
+Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" into library work
+Parsing entity <Decoder32>.
+Parsing architecture <Behavioral> of entity <decoder32>.
 Parsing VHDL file "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd" into library work
 Parsing entity <Reg_File>.
 Parsing architecture <Behavioral> of entity <reg_file>.
@@ -117,6 +120,10 @@ Parsing architecture <Behavioral> of entity <reg_file>.
 
 Elaborating entity <Reg_File> (architecture <Behavioral>) from library <work>.
 
+Elaborating entity <Decoder32> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 26: i should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd" Line 27: e should be on the sensitivity list of the process
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
@@ -125,17 +132,31 @@ Synthesizing Unit <Reg_File>.
     Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Reg_File.vhd".
 WARNING:Xst:647 - Input <readSel1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <readSel2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <writeSel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <writeData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <writeEnable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <Reg_File> synthesized.
 
+Synthesizing Unit <Decoder32>.
+    Related source file is "F:\programming\VHDL\Milestone1\Regester file\RegesterFile\Decoder32.vhd".
+WARNING:Xst:647 - Input <I<4:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   5 Latch(s).
+Unit <Decoder32> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Latches                                              : 5
+ 1-bit latch                                           : 5
+
 =========================================================================
 
 =========================================================================
@@ -154,6 +175,8 @@ Found no macro
 =========================================================================
 
 Optimizing unit <Reg_File> ...
+
+Optimizing unit <Decoder32> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -186,6 +209,16 @@ Top Level Output File Name         : Reg_File.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 6
+#      GND                         : 1
+#      LUT3                        : 5
+# FlipFlops/Latches                : 5
+#      LD                          : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 3
+#      OBUF                        : 32
 
 Device utilization summary:
 ---------------------------
@@ -194,19 +227,23 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice LUTs:                    5  out of  63400     0%  
+    Number used as Logic:                 5  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:      5
+   Number with an unused Flip Flop:       5  out of      5   100%  
+   Number with an unused LUT:             0  out of      5     0%  
+   Number of fully used LUT-FF pairs:     0  out of      5     0%  
+   Number of unique control sets:         1
 
 IO Utilization: 
- Number of IOs:                         112
- Number of bonded IOBs:                   0  out of    210     0%  
+ Number of IOs:                         113
+ Number of bonded IOBs:                  36  out of    210    17%  
+    IOB Flip Flops/Latches:               5
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of    128     0%  
 
 ---------------------------
 Partition Resource Summary:
@@ -226,7 +263,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+writeEnable                        | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -237,13 +278,52 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum input arrival time before clock: 0.628ns
+   Maximum output required time after clock: 0.751ns
    Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'writeEnable'
+  Total number of paths / destination ports: 15 / 5
+-------------------------------------------------------------------------
+Offset:              0.628ns (Levels of Logic = 2)
+  Source:            writeSel<2> (PAD)
+  Destination:       dec/O_0 (LATCH)
+  Destination Clock: writeEnable falling
+
+  Data Path: writeSel<2> to dec/O_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.001   0.530  writeSel_2_IBUF (writeSel_2_IBUF)
+     LUT3:I0->O            1   0.097   0.000  dec/I[2]_Decoder_0_OUT<0><2>1 (dec/I[2]_Decoder_0_OUT<0>)
+     LD:D                     -0.028          dec/O_0
+    ----------------------------------------
+    Total                      0.628ns (0.098ns logic, 0.530ns route)
+                                       (15.6% logic, 84.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'writeEnable'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              0.751ns (Levels of Logic = 1)
+  Source:            dec/O_4 (LATCH)
+  Destination:       dataOut1<4> (PAD)
+  Source Clock:      writeEnable falling
+
+  Data Path: dec/O_4 to dataOut1<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.279  dec/O_4 (dec/O_4)
+     OBUF:I->O                 0.000          dataOut1_4_OBUF (dataOut1<4>)
+    ----------------------------------------
+    Total                      0.751ns (0.472ns logic, 0.279ns route)
+                                       (62.8% logic, 37.2% route)
 
 =========================================================================
 
@@ -253,14 +333,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.45 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.58 secs
  
 --> 
 
-Total memory usage is 292588 kilobytes
+Total memory usage is 294444 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

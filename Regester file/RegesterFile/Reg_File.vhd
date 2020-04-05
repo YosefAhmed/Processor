@@ -11,14 +11,16 @@
 				  writeData : in  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				  writeEnable : in  STD_LOGIC;
 				  dataOut1 : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
-				  dataOut2 : out  STD_LOGIC_VECTOR(31 DOWNTO 0)
+				  dataOut2 : out  STD_LOGIC_VECTOR(31 DOWNTO 0);
+	           clk : IN  std_logic
 				  );
 	end Reg_File;
 
 	architecture Behavioral of Reg_File is
-
+	signal regNum : STD_LOGIC_VECTOR (31 DOWNTO 0);
 	begin
 
-
+		dec: Decoder32 Port Map (writeSel,regNum,writeEnable,clk);
+			
 	end Behavioral;
 

@@ -18,6 +18,15 @@
 	--use UNISIM.VComponents.all;
 
 	package ComponentsPackage is
+	
+	COMPONENT Decoder32 is
+		 Port ( I : in  STD_LOGIC_VECTOR (4 downto 0);
+				  O : out  STD_LOGIC_VECTOR (31 downto 0);
+				  E : in  STD_LOGIC;
+				  clk : IN  std_logic
+				 );
+	end COMPONENT;
+	
 	COMPONENT reg IS
 		GENERIC(n:NATURAL := 8);
 		PORT (
