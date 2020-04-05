@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.38 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.38 secs
  
 --> Reading design: ALU.prj
 
@@ -105,9 +105,33 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\ComponentsPackage.vhd" into library work
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\Adder.vhd" into library work
+Parsing entity <adder>.
+Parsing architecture <Behavioral> of entity <adder>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\zeroflag.vhd" into library work
+Parsing entity <zeroflag>.
+Parsing architecture <Behavioral> of entity <zeroflag>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\or32.vhd" into library work
+Parsing entity <or32>.
+Parsing architecture <Behavioral> of entity <or32>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\not32.vhd" into library work
+Parsing entity <not32>.
+Parsing architecture <Behavioral> of entity <not32>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux4x1.vhd" into library work
+Parsing entity <mux4x1>.
+Parsing architecture <Behavioral> of entity <mux4x1>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux2x1.vhd" into library work
+Parsing entity <mux2x1>.
+Parsing architecture <Behavioral> of entity <mux2x1>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\ComponentsPackage.vhd" into library work
 Parsing package <ComponentsPackage>.
-Parsing VHDL file "F:\programming\VHDL\Milestone1\ALU\ALU\ALU.vhd" into library work
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\and32.vhd" into library work
+Parsing entity <and32>.
+Parsing architecture <Behavioral> of entity <and32>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\adder32.vhd" into library work
+Parsing entity <adder32>.
+Parsing architecture <Behavioral> of entity <adder32>.
+Parsing VHDL file "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\ALU.vhd" into library work
 Parsing entity <ALU>.
 Parsing architecture <Behavioral> of entity <alu>.
 
@@ -117,24 +141,125 @@ Parsing architecture <Behavioral> of entity <alu>.
 
 Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
 
+Elaborating entity <not32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <and32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <or32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux2x1> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux2x1.vhd" Line 19. Case statement is complete. others clause is never selected
+
+Elaborating entity <adder32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux4x1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <zeroflag> (architecture <Behavioral>) from library <work>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <ALU>.
-    Related source file is "F:\programming\VHDL\Milestone1\ALU\ALU\ALU.vhd".
-WARNING:Xst:647 - Input <A> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <op> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\ALU.vhd".
     Summary:
 	no macro.
 Unit <ALU> synthesized.
 
+Synthesizing Unit <not32>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\not32.vhd".
+    Summary:
+	no macro.
+Unit <not32> synthesized.
+
+Synthesizing Unit <and32>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\and32.vhd".
+    Summary:
+	no macro.
+Unit <and32> synthesized.
+
+Synthesizing Unit <or32>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\or32.vhd".
+    Summary:
+	no macro.
+Unit <or32> synthesized.
+
+Synthesizing Unit <mux2x1>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux2x1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux2x1> synthesized.
+
+Synthesizing Unit <adder32>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\adder32.vhd".
+    Summary:
+	no macro.
+Unit <adder32> synthesized.
+
+Synthesizing Unit <adder>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\Adder.vhd".
+    Summary:
+Unit <adder> synthesized.
+
+Synthesizing Unit <mux4x1>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\mux4x1.vhd".
+    Found 1-bit tristate buffer for signal <O<31>> created at line 18
+    Found 1-bit tristate buffer for signal <O<30>> created at line 18
+    Found 1-bit tristate buffer for signal <O<29>> created at line 18
+    Found 1-bit tristate buffer for signal <O<28>> created at line 18
+    Found 1-bit tristate buffer for signal <O<27>> created at line 18
+    Found 1-bit tristate buffer for signal <O<26>> created at line 18
+    Found 1-bit tristate buffer for signal <O<25>> created at line 18
+    Found 1-bit tristate buffer for signal <O<24>> created at line 18
+    Found 1-bit tristate buffer for signal <O<23>> created at line 18
+    Found 1-bit tristate buffer for signal <O<22>> created at line 18
+    Found 1-bit tristate buffer for signal <O<21>> created at line 18
+    Found 1-bit tristate buffer for signal <O<20>> created at line 18
+    Found 1-bit tristate buffer for signal <O<19>> created at line 18
+    Found 1-bit tristate buffer for signal <O<18>> created at line 18
+    Found 1-bit tristate buffer for signal <O<17>> created at line 18
+    Found 1-bit tristate buffer for signal <O<16>> created at line 18
+    Found 1-bit tristate buffer for signal <O<15>> created at line 18
+    Found 1-bit tristate buffer for signal <O<14>> created at line 18
+    Found 1-bit tristate buffer for signal <O<13>> created at line 18
+    Found 1-bit tristate buffer for signal <O<12>> created at line 18
+    Found 1-bit tristate buffer for signal <O<11>> created at line 18
+    Found 1-bit tristate buffer for signal <O<10>> created at line 18
+    Found 1-bit tristate buffer for signal <O<9>> created at line 18
+    Found 1-bit tristate buffer for signal <O<8>> created at line 18
+    Found 1-bit tristate buffer for signal <O<7>> created at line 18
+    Found 1-bit tristate buffer for signal <O<6>> created at line 18
+    Found 1-bit tristate buffer for signal <O<5>> created at line 18
+    Found 1-bit tristate buffer for signal <O<4>> created at line 18
+    Found 1-bit tristate buffer for signal <O<3>> created at line 18
+    Found 1-bit tristate buffer for signal <O<2>> created at line 18
+    Found 1-bit tristate buffer for signal <O<1>> created at line 18
+    Found 1-bit tristate buffer for signal <O<0>> created at line 18
+    Summary:
+	inferred  96 Multiplexer(s).
+	inferred  32 Tristate(s).
+Unit <mux4x1> synthesized.
+
+Synthesizing Unit <zeroflag>.
+    Related source file is "M:\Learning\Third 2\Computer Architecture\Processor\ALU\ALU\zeroflag.vhd".
+    Summary:
+	no macro.
+Unit <zeroflag> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multiplexers                                         : 97
+ 1-bit 2-to-1 multiplexer                              : 96
+ 32-bit 2-to-1 multiplexer                             : 1
+# Tristates                                            : 32
+ 1-bit tristate buffer                                 : 32
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
+
 =========================================================================
 
 =========================================================================
@@ -145,14 +270,23 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Multiplexers                                         : 97
+ 1-bit 2-to-1 multiplexer                              : 96
+ 32-bit 2-to-1 multiplexer                             : 1
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2042 - Unit ALU: 32 internal tristates are replaced by logic (pull-up yes): N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N2, N20, N21, N22, N23, N24, N25, N26, N27, N28, N29, N3, N30, N31, N32, N33, N4, N5, N6, N7, N8, N9.
 
 Optimizing unit <ALU> ...
+
+Optimizing unit <adder32> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -185,6 +319,14 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 72
+#      LUT4                        : 4
+#      LUT5                        : 2
+#      LUT6                        : 66
+# IO Buffers                       : 103
+#      IBUF                        : 69
+#      OBUF                        : 2
+#      OBUFT                       : 32
 
 Device utilization summary:
 ---------------------------
@@ -193,17 +335,19 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice LUTs:                   72  out of  63400     0%  
+    Number used as Logic:                72  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
+ Number of LUT Flip Flop pairs used:     72
+   Number with an unused Flip Flop:      72  out of     72   100%  
+   Number with an unused LUT:             0  out of     72     0%  
+   Number of fully used LUT-FF pairs:     0  out of     72     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                         104
- Number of bonded IOBs:                   0  out of    210     0%  
+ Number of bonded IOBs:                 103  out of    210    49%  
 
 Specific Feature Utilization:
 
@@ -238,11 +382,48 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 8.498ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3174 / 34
+-------------------------------------------------------------------------
+Delay:               8.498ns (Levels of Logic = 21)
+  Source:            data1<1> (PAD)
+  Destination:       zflag (PAD)
+
+  Data Path: data1<1> to zflag
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.698  data1_1_IBUF (data1_1_IBUF)
+     LUT6:I0->O            3   0.097   0.305  adding/p2/cout1 (adding/carry<1>)
+     LUT6:I5->O            3   0.097   0.305  adding/p4/cout1 (adding/carry<3>)
+     LUT6:I5->O            3   0.097   0.305  adding/p6/cout1 (adding/carry<5>)
+     LUT6:I5->O            2   0.097   0.299  adding/p8/cout1 (adding/carry<7>)
+     LUT4:I3->O            3   0.097   0.305  adding/p9/cout1 (adding/carry<8>)
+     LUT6:I5->O            3   0.097   0.305  adding/p11/cout1 (adding/carry<10>)
+     LUT6:I5->O            3   0.097   0.305  adding/p13/cout1 (adding/carry<12>)
+     LUT6:I5->O            3   0.097   0.305  adding/p15/cout1 (adding/carry<14>)
+     LUT6:I5->O            3   0.097   0.305  adding/p17/cout1 (adding/carry<16>)
+     LUT6:I5->O            3   0.097   0.305  adding/p19/cout1 (adding/carry<18>)
+     LUT6:I5->O            3   0.097   0.305  adding/p21/cout1 (adding/carry<20>)
+     LUT6:I5->O            3   0.097   0.305  adding/p23/cout1 (adding/carry<22>)
+     LUT6:I5->O            3   0.097   0.305  adding/p25/cout1 (adding/carry<24>)
+     LUT6:I5->O            3   0.097   0.305  adding/p27/cout1 (adding/carry<26>)
+     LUT6:I5->O            3   0.097   0.521  adding/p29/cout1 (adding/carry<28>)
+     LUT6:I3->O            1   0.097   0.295  mux41/Mmux_S[3]_Z_13_o_Mux_3_o11 (mux41/Mmux_S[3]_Z_13_o_Mux_3_o1)
+     LUT6:I5->O            2   0.097   0.299  mux41/Mmux_S[3]_Z_13_o_Mux_3_o12 (dataout_30_OBUFT)
+     LUT5:I4->O            1   0.097   0.295  zero/output<31>10_SW0 (N74)
+     LUT6:I5->O            1   0.097   0.279  zero/output<31>10 (zflag_OBUF)
+     OBUF:I->O                 0.000          zflag_OBUF (zflag)
+    ----------------------------------------
+    Total                      8.498ns (1.844ns logic, 6.654ns route)
+                                       (21.7% logic, 78.3% route)
 
 =========================================================================
 
@@ -252,14 +433,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.81 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.93 secs
  
 --> 
 
-Total memory usage is 346604 kilobytes
+Total memory usage is 352636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -1,0 +1,41 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ALUTest_isim_beh.exe -prj M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ALUTest_beh.prj work.ALUTest 
+ISim P.58f (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/Adder.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/zeroflag.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/or32.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/not32.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/mux4x1.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/mux2x1.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ComponentsPackage.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/and32.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/adder32.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ALU.vhd" into library work
+Parsing VHDL file "M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ALUTest.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 160760 KB
+Fuse CPU Usage: 328 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package componentspackage
+Compiling architecture behavioral of entity not32 [not32_default]
+Compiling architecture behavioral of entity and32 [and32_default]
+Compiling architecture behavioral of entity or32 [or32_default]
+Compiling architecture behavioral of entity mux2x1 [mux2x1_default]
+Compiling architecture behavioral of entity adder [adder_default]
+Compiling architecture behavioral of entity adder32 [adder32_default]
+Compiling architecture behavioral of entity mux4x1 [mux4x1_default]
+Compiling architecture behavioral of entity zeroflag [zeroflag_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavior of entity alutest
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 24 VHDL Units
+Built simulation executable M:/Learning/Third 2/Computer Architecture/Processor/ALU/ALU/ALUTest_isim_beh.exe
+Fuse Memory Usage: 181916 KB
+Fuse CPU Usage: 421 ms
